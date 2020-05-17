@@ -93,42 +93,42 @@
 
         <fieldset class="filter-item">
           <legend>Цена:</legend>
-          <input type="text" id="min-price" value="100">
+          <input type="text" id="min-price" name="min-price" value="100">
           <label for="min-price">&#8381;</label>
-          <input type="text" id="max-price" value="500">
+          <input type="text" id="max-price" name="max-price" value="500">
           <label for="max-price">&#8381;</label>
         </fieldset>
 
         <fieldset class="filter-item">
           <legend>Жирность:</legend>
-          <input type="radio" id="percent-0">
+          <input type="radio" id="percent-0" name="percent-0">
           <label for="percent-0">0%</label>
 
-          <input type="radio" id="percent-lt-10" checked>
+          <input type="radio" id="percent-lt-10" name="percent-lt-10" checked>
           <label for="percent-lt-10">до 10%</label>
 
-          <input type="radio" id="percent-lt-30">
+          <input type="radio" id="percent-lt-30" name="percent-lt-30">
           <label for="percent-lt-30">до 30%</label>
 
-          <input type="radio" id="percent-mt-30">
+          <input type="radio" id="percent-mt-30" name="percent-mt-10">
           <label>выше 30%</label>
         </fieldset>
 
         <fieldset class="filter-item">
           <legend>Наполнители:</legend>
-          <input type="checkbox" id="chocolate" checked>
+          <input type="checkbox" id="chocolate" name="chocolate" checked>
           <label for="chocolate">шоколадные</label>
 
-          <input type="checkbox" id="shugar" checked>
+          <input type="checkbox" id="shugar" name="shugar" checked>
           <label for="shugar">сахарные присыпки</label>
 
-          <input type="checkbox" id="fruct">
+          <input type="checkbox" id="fruct" name="fruct">
           <label for="fruct">фрукты</label>
 
-          <input type="checkbox" id="syrup">
+          <input type="checkbox" id="syrup" name="syrup">
           <label for="syrup">сиропы</label>
 
-          <input type="checkbox" id="jam">
+          <input type="checkbox" id="jam" name="jam">
           <label for="jam">джемы</label>
 
         </fieldset>
@@ -359,7 +359,6 @@
         <a href="#">Экологические стандарты</a>
       </li>
     </ul>
-
     <div class="footer-copyright">
       <a href="https://htmlacademy.ru/intensive/htmlcss">
         <svg>
