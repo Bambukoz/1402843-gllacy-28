@@ -17,7 +17,7 @@
 
       <ul class="site-navigation">
         <li class="navigation-item">
-          <a href="catalog.html">Каталог</a>
+          <a href="#">Каталог</a>
           <ul class="sub-menu">
             <li class="sub-menu-item">
               <a href="#">Новинки</a>
@@ -65,12 +65,119 @@
 
     <div class="info">
       <span class="info-worktime">с 10 до 20, ежедневно</span>
-      <a href="tel:8 812 450-25-25" class="info-phone">8 812 450-25-25</a>
+      <a href="tel:+78124502525" class="info-phone">8 812 450-25-25</a>
     </div>
   </header>
 
   <main>
     <h1 class="visually-hidden">Магазин мороженного "Глейси"</h1>
+
+    <section class="main-promo">
+      <h2 class="visually-hidden">Cлайдеры меню</h2>
+      <ul class="slider-list">
+        <li class="slider-item">
+          <!-- <img>
+          <img> -->
+          <h3>Крем-брюле и пломбир с малиновым джемом</h3>
+          <a href="#">Дайте оба!</a>
+        </li>
+        <li class="slider-item">
+          <!-- <img>
+          <img> -->
+          <h3>Шоколадный пломбир и лимонный сорбет</h3>
+          <a href="#">Дайте оба!</a>
+        </li>
+        <li>
+          <!-- <img>
+          <img> -->
+          <h3>Пломбир с помадкой и клубничный щербет</h3>
+          <a href="#">Дайте оба!</a>
+        </li>
+      </ul>
+    </section>
+
+    <div class="promo-sliders">
+      <button class="slider-button" type="button">Промо-1</button>
+      <button class="slider-button" type="button">Промо-2</button>
+      <button class="slider-button" type="button">Промо-2</button>
+    </div>
+
+
+    <section class="main-promotions">
+      <h2 class="visually-hidden">Акции магазина</h2>
+
+      <section class="promotion-iten">
+        <h3>Малинка даром!</h3>
+        <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку маринового варенья бесплатно.</p>
+        <a href="#">Хочу варенье!</a>
+        <!-- Либо сделать <button> , но ее через скрипт и если скрипт не сработает,
+          то будет не ок -->
+      </section>
+
+      <section class="promotion-item">
+        <h3>Шоколадки даром!</h3>
+        <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
+        </p>
+        <a href="#">Хочу шоколадки!</a>
+        <!--  Либо сделать <button> , но ее через скрипт и если скрипт не сработает,
+          то будет не ок -->
+      </section>
+    </section>
+
+    <section class="popular-products">
+      <h2 class="visually-hidden">Популярное мороженное</h2>
+      <ul class="popular-list">
+        <li class="popular-item">
+          <article class="card">
+            <a href="#">
+              <img src="https://via.placeholder.com/150x100" alt="Мороженное" width="150" height="100">
+            </a>
+            <p> 310 &#8381; &#47; <span>кг</span> </p>
+            <a href="#">
+              <h3 class="card-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+            </a>
+            <a href="#">Быстрый просмотр</a>
+          </article>
+        </li>
+        <li class="popular-item">
+          <article class="card">
+            <a href="#">
+              <img src="https://via.placeholder.com/150x100" alt="Мороженное" width="150" height="100">
+            </a>
+            <p> 380 &#8381; &#47; <span>кг</span> </p>
+            <a href="#">
+              <h3 class="card-title">Сливочно-кофейное с кусочками шоколада</h3>
+            </a>
+            <a href="#">Быстрый просмотр</a>
+          </article>
+        </li>
+        <li class="popular-item">
+          <article class="card">
+            <a href="#">
+              <img src="https://via.placeholder.com/150x100" alt="Мороженное" width="150" height="100">
+            </a>
+            <p> 355 &#8381; &#47; <span>кг</span> </p>
+            <a href="#">
+              <h3 class="card-title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
+            </a>
+            <a href="#">Быстрый просмотр</a>
+          </article>
+        </li>
+        <li class="popular-item">
+          <article class="card">
+            <a href="#">
+              <img src="https://via.placeholder.com/150x100" alt="Мороженное" width="150" height="100">
+            </a>
+            <p> 415 &#8381; &#47; <span>кг</span> </p>
+            <a href="#">
+              <h3 class="card-title">Сливочное крем-брюле с карамельной подливкой</h3>
+            </a>
+            <a href="#">Быстрый просмотр</a>
+          </article>
+        </li>
+      </ul>
+    </section>
+
     <section class="company-description">
       <h2>Магазин Глeйси – это онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес</h2>
       <ul>
@@ -104,6 +211,23 @@
         Обещаем не спамить и не слать всякой ненужной ерунды. Честно &#61;&#41;</p>
       <!-- <form>
       </form> -->
+    </section>
+
+    <section class="map-and-contacts">
+      <h2 class="visually-hidden">Как с нами связаться</h2>
+
+      <article class="contacts">
+        <h3>Адрес главного офиса и офлайн-магазина:</h3>
+        <p>ул. Большая Конюшенная, 19/8, Санкт-Петербург</p>
+        <h3>Для заказов по телефону:</h3>
+        <a href="tel:+78124502525">8 812 450-25-25</a>
+        <p>&#40;с 10 до 20 ежедневно&#41;</p>
+        <!--Здесь лучше поставить ссылку на форму и вызывать ее через JS-->
+        <a href="#">Форма обратной связи</a>
+        <!-- <script>
+          карта через JS подключится в конце страницы
+        </script> -->
+      </article>
     </section>
   </main>
 
