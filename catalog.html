@@ -15,9 +15,9 @@
         <img class="main-logo" src="img/main-logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
       </a>
 
-      <ul class="site-nav">
-        <li class="nav-item">
-          <a>Каталог</a>
+      <ul class="site-navigation">
+        <li class="navigation-item">
+          <a href="#">Каталог</a>
           <ul class="sub-menu">
             <li class="sub-menu-item">
               <a href="#">Новинки</a>
@@ -36,29 +36,36 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item">
+        <li class="navigation-item">
           <a href="#">Доставка и оплата</a>
         </li>
-        <li class="nav-item">
+        <li class="navigation-item">
           <a href="#">О компании</a>
         </li>
       </ul>
     </nav>
-    <ul class="user-nav">
-      <li class="user-nav-item">
+
+    <ul class="user-navigation">
+      <li class="user-navigation-item">
         <button type="button">Поиск</button>
+        <!-- <form>
+            </form> -->
       </li>
-      <li class="user-nav-item">
+      <li class="user-navigation-item">
         <button type="button">Вход</button>
+        <!-- <form>
+            </form> -->
       </li>
-      <li class="user-nav-item">
+      <li class="user-navigation-item">
         <button type="button">Корзина</button>
+        <!-- <form>
+            </form> -->
       </li>
     </ul>
 
     <div class="info">
       <span class="info-worktime">с 10 до 20, ежедневно</span>
-      <a href="tel:8 812 450-25-25" class="info-phone">8 812 450-25-25</a>
+      <a href="tel:+78124502525" class="info-phone">8 812 450-25-25</a>
     </div>
   </header>
 
@@ -70,8 +77,65 @@
     </ul>
 
     <h1 class="catalog-title">Сливочное мороженное</h1>
-    <!-- <form>
-      </form> -->
+
+    <section class="products-filter">
+      <h2 class="visually-hidden">Фильтр товаров</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="filter-item">
+          <legend>Сортировка:</legend>
+          <select class="filter-sorting" id="sorting">
+            <option value="popular" selected>по популярности</option>
+            <option value="cheap">сначала недорогие</option>
+            <option value="expensive">сначала дорогие</option>
+            <option value="fat">по жирности</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="filter-item">
+          <legend>Цена:</legend>
+          <input type="text" id="min-price" value="100">
+          <label for="min-price">&#8381;</label>
+          <input type="text" id="max-price" value="500">
+          <label for="max-price">&#8381;</label>
+        </fieldset>
+
+        <fieldset class="filter-item">
+          <legend>Жирность:</legend>
+          <input type="radio" id="percent-0">
+          <label for="percent-0">0%</label>
+
+          <input type="radio" id="percent-lt-10" checked>
+          <label for="percent-lt-10">до 10%</label>
+
+          <input type="radio" id="percent-lt-30">
+          <label for="percent-lt-30">до 30%</label>
+
+          <input type="radio" id="percent-mt-30">
+          <label>выше 30%</label>
+        </fieldset>
+
+        <fieldset class="filter-item">
+          <legend>Наполнители:</legend>
+          <input type="checkbox" id="chocolate" checked>
+          <label for="chocolate">шоколадные</label>
+
+          <input type="checkbox" id="shugar" checked>
+          <label for="shugar">сахарные присыпки</label>
+
+          <input type="checkbox" id="fruct">
+          <label for="fruct">фрукты</label>
+
+          <input type="checkbox" id="syrup">
+          <label for="syrup">сиропы</label>
+
+          <input type="checkbox" id="jam">
+          <label for="jam">джемы</label>
+
+        </fieldset>
+        <button type="submit">Применить</button>
+      </form>
+    </section>
+
     <section class="catalog">
       <h2 class="visually-hidden">Каталог мороженного</h2>
       <ul class="catalog-list">
@@ -221,6 +285,32 @@
         </li>
       </ul>
     </section>
+
+    <div class="paginator">
+      <ul class="paginator-list">
+        <li class="paginator-item left">
+          <a href="#" aria-label="Назад">&lt;</a>
+        </li>
+        <li class="paginator-item">
+          <a href="#">1</a>
+        </li>
+        <li class="paginator-item">
+          <a href="#">2</a>
+        </li>
+        <li class="paginator-item">
+          <a href="#">3</a>
+        </li>
+        <li class="paginator-item">
+          <a href="#">4</a>
+        </li>
+        <li class="paginator-item">
+          <a href="#">5</a>
+        </li>
+        <li class="paginator-item right">
+          <a href="#" aria-label="Вперед">&gt;</a>
+        </li>
+      </ul>
+    </div>
   </main>
 
   <footer class="footer">
