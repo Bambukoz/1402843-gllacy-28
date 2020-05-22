@@ -85,8 +85,40 @@
           </svg>
           <span>Корзина</span>
         </button>
-        <!-- <form>
-            </form> -->
+
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <table class="busket-table">
+            <tr>
+              <td class="busket-item">
+                <button type="button"></button>
+              </td>
+              <td class="busket-item">
+                <a href="#">
+                  <img src="img/items-jpg/item-1-small.jpg" width="33" height="33" alt="Мороженное">
+                </a>
+              </td>
+              <td class="busket-item">Пломбир с апельсиновым джемом</td>
+              <td class="busket-item">1,5 кг х</td>
+              <td class="busket-item">200 руб.</td>
+              <td class="busket-item">300 руб.</td>
+            </tr>
+            <tr>
+              <td class="busket-item">
+                <button type="button"></button>
+              </td>
+              <td class="busket-item">
+                <a href="#">
+                  <img src="img/items-jpg/item-2-small.jpg" width="33" height="33" alt="Мороженное">
+                </a>
+              </td>
+              <td class="busket-item">Клубничный пломбир с присыпкой из белого шоколада</td>
+              <td class="busket-item">1,5 кг х</td>
+              <td class="busket-item">300 руб.</td>
+              <td class="busket-item">450 руб.</td>
+          </table>
+          <p class="total-price">Итого: 750 руб.</p>
+          <button class="button" type="submit">Оформить заказ</button>
+        </form>
       </li>
     </ul>
 
@@ -120,46 +152,62 @@
 
         <fieldset class="filter-item">
           <legend>Цена:</legend>
+
           <input type="text" id="filter-min-price" name="min-price" value="100">
-          <label for="filter-min-price">&#8381;</label>
+          <label for="filter-min-price" aria-label="Минимальная цена">&#8381;</label>
+
           <input type="text" id="filter-max-price" name="max-price" value="500">
-          <label for="filter-max-price">&#8381;</label>
+          <label for="filter-max-price" aria-label="Максимальная цена">&#8381;</label>
         </fieldset>
 
         <fieldset class="filter-item">
           <legend>Жирность:</legend>
-          <input type="radio" id="filter-percent-0" name="percent-fat">
-          <label for="filter-percent-0">0%</label>
-
-          <input type="radio" id="filter-percent-lt-10" name="percent-fat">
-          <label for="filter-percent-lt-10">до 10%</label>
-
-          <input type="radio" id="filter-percent-lt-30" name="percent-fat">
-          <label for="filter-percent-lt-30">до 30%</label>
-
-          <input type="radio" id="filter-percent-mt-30" name="percent-fat">
-          <label for="filter-percent-mt-30">выше 30%</label>
+          <ul>
+            <li>
+              <input type="radio" id="filter-percent-0" name="percent-fat">
+              <label for="filter-percent-0">0%</label>
+            </li>
+            <li>
+              <input type="radio" id="filter-percent-lt-10" name="percent-fat" checked>
+              <label for="filter-percent-lt-10">до 10%</label>
+            </li>
+            <li>
+              <input type="radio" id="filter-percent-lt-30" name="percent-fat">
+              <label for="filter-percent-lt-30">до 30%</label>
+            </li>
+            <li>
+              <input type="radio" id="filter-percent-mt-30" name="percent-fat">
+              <label for="filter-percent-mt-30">выше 30%</label>
+            </li>
+          </ul>
         </fieldset>
 
         <fieldset class="filter-item">
           <legend>Наполнители:</legend>
-          <input type="checkbox" id="filter-chocolate" name="chocolate">
-          <label for="filter-chocolate">шоколадные</label>
-
-          <input type="checkbox" id="filter-shugar" name="shugar">
-          <label for="filter-shugar">сахарные присыпки</label>
-
-          <input type="checkbox" id="filter-fruct" name="fruct">
-          <label for="filter-fruct">фрукты</label>
-
-          <input type="checkbox" id="filter-syrup" name="syrup">
-          <label for="filter-syrup">сиропы</label>
-
-          <input type="checkbox" id="filter-jam" name="jam">
-          <label for="filter-jam">джемы</label>
-
+          <ul>
+            <li>
+              <input type="checkbox" id="filter-chocolate" name="chocolate" checked>
+              <label for="filter-chocolate">шоколадные</label>
+            </li>
+            <li>
+              <input type="checkbox" id="filter-shugar" name="shugar" checked>
+              <label for="filter-shugar">сахарные присыпки</label>
+            </li>
+            <li>
+              <input type="checkbox" id="filter-fruct" name="fruct">
+              <label for="filter-fruct">фрукты</label>
+            </li>
+            <li>
+              <input type="checkbox" id="filter-syrup" name="syrup">
+              <label for="filter-syrup">сиропы</label>
+            </li>
+            <li>
+              <input type="checkbox" id="filter-jam" name="jam">
+              <label for="filter-jam">джемы</label>
+            </li>
+          </ul>
         </fieldset>
-        <button type="submit">Применить</button>
+        <button class="filter-button" type="submit">Применить</button>
       </form>
     </section>
 
@@ -175,7 +223,7 @@
             <a href="#">
               <h3 class="card-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
             </a>
-            <a href="#">Быстрый просмотр</a>
+            <a class="button" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="catalog-item">
@@ -187,7 +235,7 @@
             <a href="#">
               <h3 class="card-title">Сливочно-кофейное с кусочками шоколада</h3>
             </a>
-            <a href="#">Быстрый просмотр</a>
+            <a class="button" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="catalog-item">
@@ -199,7 +247,7 @@
             <a href="#">
               <h3 class="card-title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
             </a>
-            <a href="#">Быстрый просмотр</a>
+            <a class="button" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="catalog-item">
@@ -211,7 +259,7 @@
             <a href="#">
               <h3 class="card-title">Сливочное крем-брюле с карамельной подливкой</h3>
             </a>
-            <a href="#">Быстрый просмотр</a>
+            <a class="button" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="catalog-item">
@@ -223,7 +271,7 @@
             <a href="#">
               <h3 class="card-title">Сливочное с брусничным джемом</h3>
             </a>
-            <a href="#">Быстрый просмотр</a>
+            <a class="button" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="catalog-item">
@@ -235,7 +283,7 @@
             <a href="#">
               <h3 class="card-title">Сливочно-черничное с цельными ягодами черники</h3>
             </a>
-            <a href="#">Быстрый просмотр</a>
+            <a class="button" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="catalog-item">
@@ -247,7 +295,7 @@
             <a href="#">
               <h3 class="card-title">Сливочно-лимонное с карамельной присыпкой</h3>
             </a>
-            <a href="#">Быстрый просмотр</a>
+            <a class="button" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="catalog-item">
@@ -259,7 +307,7 @@
             <a href="#">
               <h3 class="card-title">Сливочное с шоколадной стружкой</h3>
             </a>
-            <a href="#">Быстрый просмотр</a>
+            <a class="button" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="catalog-item">
@@ -271,7 +319,7 @@
             <a href="#">
               <h3 class="card-title">Сливочно-ванильное с кусочками шоколада</h3>
             </a>
-            <a href="#">Быстрый просмотр</a>
+            <a class="button" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="catalog-item">
@@ -283,7 +331,7 @@
             <a href="#">
               <h3 class="card-title">Сливочноe с ментоловым сиропом</h3>
             </a>
-            <a href="#">Быстрый просмотр</a>
+            <a class="button" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="catalog-item">
@@ -295,7 +343,7 @@
             <a href="#">
               <h3 class="card-title">Сливочное с кусочками черного шоколада</h3>
             </a>
-            <a href="#">Быстрый просмотр</a>
+            <a class="button" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="catalog-item">
@@ -307,7 +355,7 @@
             <a href="#">
               <h3 class="card-title">Сливочное с мятным сиропом</h3>
             </a>
-            <a href="#">Быстрый просмотр</a>
+            <a class="button" href="#">Быстрый просмотр</a>
           </article>
         </li>
       </ul>
@@ -316,7 +364,7 @@
     <div class="paginator">
       <ul class="paginator-list">
         <li class="paginator-item left">
-          <a href="#" aria-label="Назад">
+          <a href="#" aria-label="Предыдущая страница">
             <!-- Позже стрелки сделаем псевдоэлементом -->
             <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -326,22 +374,22 @@
           </a>
         </li>
         <li class="paginator-item">
-          <a href="#">1</a>
+          <a href="#" aria-label="Перейти на страницу 1">1</a>
         </li>
         <li class="paginator-item">
-          <a href="#">2</a>
+          <a href="#" aria-label="Перейти на страницу 2">2</a>
         </li>
         <li class="paginator-item">
-          <a href="#">3</a>
+          <a href="#" aria-label="Перейти на страницу 3">3</a>
         </li>
         <li class="paginator-item">
-          <a href="#">4</a>
+          <a href="#" aria-label="Перейти на страницу 4">4</a>
         </li>
         <li class="paginator-item">
-          <a href="#">5</a>
+          <a href="#" aria-label="Перейти на страницу 5">5</a>
         </li>
         <li class="paginator-item right">
-          <a href="#" aria-label="Вперед">
+          <a href="#" aria-label="Следующая страница">
             <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M6.84111 5.65875L0.932395 0.148752C0.829699 0.05349 0.690626 0 0.545642 0C0.400659 0 0.261586 0.05349 0.15889 0.148752C0.108543 0.195234 0.0685817 0.250534 0.041311 0.311464C0.0140403 0.372393 0 0.437746 0 0.503752C0 0.569758 0.0140403 0.635111 0.041311 0.69604C0.0685817 0.75697 0.108543 0.812271 0.15889 0.858752L5.6916 5.99875L0.15889 11.1688C0.108543 11.2152 0.0685817 11.2705 0.041311 11.3315C0.0140403 11.3924 0 11.4577 0 11.5238C0 11.5898 0.0140403 11.6551 0.041311 11.716C0.0685817 11.777 0.108543 11.8323 0.15889 11.8788C0.266426 11.9636 0.404942 12.0065 0.545642 11.9988C0.616091 11.9996 0.68594 11.9866 0.750698 11.9608C0.815455 11.935 0.873688 11.8968 0.921651 11.8488L6.84111 6.36875C6.89146 6.32227 6.93142 6.26697 6.95869 6.20604C6.98596 6.14511 7 6.07976 7 6.01375C7 5.94775 6.98596 5.88239 6.95869 5.82146C6.93142 5.76053 6.89146 5.70523 6.84111 5.65875Z"

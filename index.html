@@ -47,18 +47,24 @@
 
     <ul class="user-navigation">
       <li class="user-navigation-item">
-        <button type="button">
+        <button class="search-button" type="button">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M16 14.6652L11.0785 9.73294C11.9827 8.48188 12.3826 6.93501 12.1984 5.40134C12.0141 3.86767 11.2594 2.4601 10.0848 1.45982C8.91022 0.45954 7.40233 -0.0598191 5.86234 0.00548954C4.32234 0.0707982 2.86363 0.715967 1.77757 1.81212C0.691516 2.90827 0.0580813 4.3747 0.0038002 5.91849C-0.050481 7.46228 0.478388 8.96976 1.48476 10.1398C2.49113 11.3098 3.90092 12.0563 5.43251 12.2301C6.96409 12.4039 8.50472 11.9922 9.74663 11.0772L14.6586 16L16 14.6652ZM6.08152 10.3767C5.24079 10.3767 4.41895 10.1268 3.71991 9.65874C3.02087 9.19063 2.47604 8.5253 2.15431 7.74687C1.83258 6.96844 1.7484 6.11188 1.91241 5.28551C2.07643 4.45913 2.48128 3.70006 3.07576 3.10427C3.67024 2.50849 4.42766 2.10276 5.25223 1.93838C6.0768 1.77401 6.93149 1.85837 7.70822 2.1808C8.48495 2.50324 9.14883 3.04927 9.61591 3.74983C10.083 4.4504 10.3323 5.27404 10.3323 6.11661C10.3298 7.24568 9.88115 8.3278 9.08451 9.12618C8.28788 9.92456 7.20813 10.3742 6.08152 10.3767Z"
               fill="white" />
           </svg>
         </button>
-        <!-- <form>
-            </form> -->
+        <form action="https://echo.htmlacademy.ru" method="get">
+
+          <label class="visually-hidden" for="site-search" aria-label="Поиск товаров"></label>
+          <input type="search" id="site-search" name="search" placeholder="Крем-брюле">
+
+          <button type="submit"></button>
+        </form>
       </li>
+
       <li class="user-navigation-item">
-        <button type="button">
+        <button class="auth-button" type="button">
           <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z" fill="white" />
             <path
@@ -67,11 +73,30 @@
           </svg>
           <span>Вход</span>
         </button>
-        <!-- <form>
-            </form> -->
+
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <ul class="auth-list">
+            <li class="auth-item">
+              <label for="user-email" aria-label="Электронная почта"></label>
+              <input type="email" id="user-email" name="email" placeholder="email@example.com">
+            </li>
+            <li class="auth-item">
+              <label for="user-password" aria-label="Пароль"></label>
+              <input type="password" id="user-password" name="password" placeholder="••••••">
+            </li>
+            <li class="auth-item">
+              <a href="#">Забыли пароль?</a>
+            </li>
+            <li class="auth-item">
+              <a href="#">Новая регистрация</a>
+            </li>
+          </ul>
+          <button class="button" type="submit">Войти</button>
+        </form>
       </li>
+
       <li class="user-navigation-item">
-        <button type="button">
+        <button class=busket-button type="button">
           <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z"
@@ -85,8 +110,6 @@
           </svg>
           <span>Корзина</span>
         </button>
-        <!-- <form>
-            </form> -->
       </li>
     </ul>
 
@@ -105,17 +128,17 @@
         <li class="slider-item">
           <img src="img/promo-ice-1.png" width="647" height="584" alt="Две мороженки">
           <h3>Крем-брюле и пломбир с малиновым джемом</h3>
-          <a href="#">Дайте оба!</a>
+          <a class="button" href="#">Дайте оба!</a>
         </li>
         <li class="slider-item">
           <img src="img/promo-ice-2.png" width="644" height="582" alt="Две мороженки">
           <h3>Шоколадный пломбир и лимонный сорбет</h3>
-          <a href="#">Дайте оба!</a>
+          <a class="button" href="#">Дайте оба!</a>
         </li>
         <li>
           <img src="img/promo-ice-3.png" width="639" height="582" alt="Две мороженки">
           <h3>Пломбир с помадкой и клубничный щербет</h3>
-          <a href="#">Дайте оба!</a>
+          <a class="button" href="#">Дайте оба!</a>
         </li>
       </ul>
     </section>
@@ -133,18 +156,14 @@
       <article class="promotion-item">
         <h3>Малинка даром!</h3>
         <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку маринового варенья бесплатно.</p>
-        <a href="#">Хочу варенье!</a>
-        <!-- Либо сделать <button> , но ее через скрипт и если скрипт не сработает,
-          то будет не ок -->
+        <a class="button" href="#">Хочу варенье!</a>
       </article>
 
       <article class="promotion-item">
         <h3>Шоколадки даром!</h3>
         <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
         </p>
-        <a href="#">Хочу шоколадки!</a>
-        <!--  Либо сделать <button> , но ее через скрипт и если скрипт не сработает,
-          то будет не ок -->
+        <a class="button" href="#">Хочу шоколадки!</a>
       </article>
     </div>
 
@@ -160,7 +179,7 @@
             <a href="#">
               <h3 class="card-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
             </a>
-            <a href="#">Быстрый просмотр</a>
+            <a class="button" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="popular-item">
@@ -172,7 +191,7 @@
             <a href="#">
               <h3 class="card-title">Сливочно-кофейное с кусочками шоколада</h3>
             </a>
-            <a href="#">Быстрый просмотр</a>
+            <a class="button" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="popular-item">
@@ -184,7 +203,7 @@
             <a href="#">
               <h3 class="card-title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
             </a>
-            <a href="#">Быстрый просмотр</a>
+            <a class="button" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="popular-item">
@@ -196,7 +215,7 @@
             <a href="#">
               <h3 class="card-title">Сливочное крем-брюле с карамельной подливкой</h3>
             </a>
-            <a href="#">Быстрый просмотр</a>
+            <a class="button" href="#">Быстрый просмотр</a>
           </article>
         </li>
       </ul>
@@ -267,8 +286,14 @@
       <h2 class="visually-hidden">Подписка на рассылку</h2>
       <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит.
         Обещаем не спамить и не слать всякой ненужной ерунды. Честно &#61;&#41;</p>
-      <!-- <form>
-      </form> -->
+
+      <form action="https://echo.htmlacademy.ru" method="post">
+
+        <label for="submit-email" aria-label="Электронная почта"></label>
+        <input type="email" id="submit-email" name="email" placeholder="email@example.com">
+
+        <button class="button" type="submit">Отправить</button>
+      </form>
     </section>
 
     <section class="map-and-contacts">
@@ -280,7 +305,7 @@
         <h3>Для заказов по телефону:</h3>
         <a href="tel:+78124502525">8 812 450-25-25</a>
         <p>&#40;с 10 до 20 ежедневно&#41;</p>
-        <a href="#">Форма обратной связи</a>
+        <a class="button" href="#">Форма обратной связи</a>
         <!-- <script>
           карта через JS подключится в конце страницы
         </script> -->
@@ -407,6 +432,30 @@
       <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
     </div>
   </footer>
+
+  <div class="overlay">
+    <button type="button">Закрыть</button>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <fieldset>
+        <p>Мы обязательно вам ответим!</p>
+        <ul>
+          <li>
+            <label for="overlay-user-name" aria-label="Имя пользователя"></label>
+            <input type="text" id="overlay-user-name" name="user-name" placeholder="Как вас зовут?">
+          </li>
+          <li>
+            <label for="overlay-user-email" aria-label="Электронная почта"></label>
+            <input type="email" id="overlay-user-email" name="user-email" placeholder="Ваша почта для ответа?">
+          </li>
+          <li>
+            <label for="overlay-textarea" aria-label="Ваше письмо нам"></label>
+            <textarea id="overlay-textarea" name="user-text" rows="5" placeholder="Напишите что-нибудь..."></textarea>
+          </li>
+        </ul>
+      </fieldset>
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
 </body>
 
 </html>
