@@ -1,5 +1,100 @@
-body {
-  background-color: grey;
+/* Шрифты */
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto.woff2");
+  src: url("../fonts/roboto.woff2") format("woff2"), url("../fonts/roboto.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/robotomedium.woff2");
+  src: url("../fonts/robotomedium.woff2") format("woff2"), url("../fonts/robotomedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/robotobold.woff2");
+  src: url("../fonts/robotobold.woff2") format("woff2"), url("../fonts/robotobold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* root переменные */
+:root {
+  --background-promo-1: #849D8F;
+  --background-promo-2: #8996A6;
+  --background-promo-3: #9D8B84;
+
+  --background-color-for-logo: #FBFCFB;
+  --modal-background: #F8F7F4;
+
+  --basic-white: #FFFFFF;
+  --basic-black: #323232;
+
+  --subscription-text: #5A5A5A;
+  --placeholders: #999999;
+
+  --point-in-hover: #FBDED7;
+  --point-active: #F6B5A5;
+  --active-page: #D07058;
+  --link-hover: #FFBC9E;
+  --link-hover-most-saturate: #E84D37;
+
+  --click-on-point: #EDEDED;
+}
+
+/*  Глобальные стили */
+
+body {
+  min-width: 1220px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  color: var(--basic-white);
+  background-color: var(--background-promo-1);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Кнопки */
+.button {
+  font: inherit;
+  color: var(--basic-white);
+  text-align: center;
+  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+  border-radius: 70px;
+  border: none;
+  cursor: pointer;
+}
+
+.user-navigation-button {
+  font: inherit;
+  color: var(--basic-white);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
 
 /* чтобы все иконки видеть */
