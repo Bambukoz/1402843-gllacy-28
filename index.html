@@ -48,7 +48,7 @@
 
       <ul class="user-nav">
         <li class="user-nav__item">
-          <button class="btn user-nav__btn" type="button">
+          <button class="user-nav__btn user-nav__search-btn" type="button">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M16 14.6652L11.0785 9.73294C11.9827 8.48188 12.3826 6.93501 12.1984 5.40134C12.0141 3.86767 11.2594 2.4601 10.0848 1.45982C8.91022 0.45954 7.40233 -0.0598191 5.86234 0.00548954C4.32234 0.0707982 2.86363 0.715967 1.77757 1.81212C0.691516 2.90827 0.0580813 4.3747 0.0038002 5.91849C-0.050481 7.46228 0.478388 8.96976 1.48476 10.1398C2.49113 11.3098 3.90092 12.0563 5.43251 12.2301C6.96409 12.4039 8.50472 11.9922 9.74663 11.0772L14.6586 16L16 14.6652ZM6.08152 10.3767C5.24079 10.3767 4.41895 10.1268 3.71991 9.65874C3.02087 9.19063 2.47604 8.5253 2.15431 7.74687C1.83258 6.96844 1.7484 6.11188 1.91241 5.28551C2.07643 4.45913 2.48128 3.70006 3.07576 3.10427C3.67024 2.50849 4.42766 2.10276 5.25223 1.93838C6.0768 1.77401 6.93149 1.85837 7.70822 2.1808C8.48495 2.50324 9.14883 3.04927 9.61591 3.74983C10.083 4.4504 10.3323 5.27404 10.3323 6.11661C10.3298 7.24568 9.88115 8.3278 9.08451 9.12618C8.28788 9.92456 7.20813 10.3742 6.08152 10.3767Z"
@@ -65,7 +65,7 @@
         </li>
 
         <li class="user-nav__item">
-          <button class="btn user-nav__btn" type="button">
+          <button class="user-nav__btn user-nav__enter-btn" type="button">
             <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z" fill="white" />
               <path
@@ -94,12 +94,12 @@
                 <a href="#">Новая регистрация</a>
               </li>
             </ul>
-            <button class="btn submit__btn" type="submit">Войти</button>
+            <button class="btn enter-form__submit-btn" type="submit">Войти</button>
           </form>
         </li>
 
         <li class="user-nav__item">
-          <button class="btn user-nav__btn" type="button">
+          <button class="user-nav__btn user-nav__busket-btn" type="button">
             <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z"
@@ -118,7 +118,7 @@
             <table class="busket-table">
               <tr>
                 <td class="busket-table__td">
-                  <button class="btn del__btn" type="button"></button>
+                  <button class="busket-table__del-btn" type="button"></button>
                 </td>
                 <td class="busket-table__td">
                   <a href="#">
@@ -132,7 +132,7 @@
               </tr>
               <tr>
                 <td class="busket-table__td">
-                  <button class="btn del__btn" type="btn del__btn"></button>
+                  <button class="busket-table__del-btn" type="button"></button>
                 </td>
                 <td class="busket-table__td">
                   <a href="#">
@@ -145,7 +145,7 @@
                 <td class="busket-table__td">450 руб.</td>
             </table>
             <p class="busket-table__price">Итого: 750 руб.</p>
-            <button class="btn submit__btn" type="submit">Оформить заказ</button>
+            <button class="btn busket-form__submit-btn" type="submit">Оформить заказ</button>
           </form>
         </li>
       </ul>
@@ -164,18 +164,18 @@
       <ul class="slider__list">
         <li class="slider__item slider__item_active">
           <img src="img/promo-ice-1.png" width="647" height="584" alt="Две мороженки">
-          <h3>Крем-брюле и пломбир с малиновым джемом</h3>
-          <a class="btn slider__btn" href="#">Дайте оба!</a>
+          <h3 class="slider__title">Крем-брюле и пломбир&nbsp;с малиновым джемом</h3>
+          <a class="btn slider-btn" href="#">Давайте оба!</a>
         </li>
         <li class="slider__item">
           <img src="img/promo-ice-2.png" width="644" height="582" alt="Две мороженки">
-          <h3>Шоколадный пломбир и лимонный сорбет</h3>
-          <a class="btn slider__btn" href="#">Дайте оба!</a>
+          <h3 class="slider__title">Шоколадный пломбир&nbsp;и лимонный сорбет</h3>
+          <a class="btn slider-btn" href="#">Давайте оба!</a>
         </li>
         <li class="slider__item">
           <img src="img/promo-ice-3.png" width="639" height="582" alt="Две мороженки">
-          <h3>Пломбир с помадкой и клубничный щербет</h3>
-          <a class="btn slider__btn" href="#">Дайте оба!</a>
+          <h3 class="slider__title">Пломбир с помадкой&nbsp;и клубничный щербет</h3>
+          <a class="btn slider-btn" href="#">Давайте оба!</a>
         </li>
       </ul>
     </section>
@@ -193,14 +193,14 @@
       <article class="promotion__item promotion__item_chocolate">
         <h3>Малинка даром!</h3>
         <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку маринового варенья бесплатно.</p>
-        <a class="btn promotion__btn" href="#">Хочу варенье!</a>
+        <a class="btn promotion-btn" href="#">Хочу варенье!</a>
       </article>
 
       <article class="promotion__item promotion__item_rapsberry">
         <h3>Шоколадки даром!</h3>
         <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
         </p>
-        <a class="btn promotion__btn" href="#">Хочу шоколадки!</a>
+        <a class="btn promotion-btn" href="#">Хочу шоколадки!</a>
       </article>
     </div>
 
@@ -216,7 +216,7 @@
             <a href="#">
               <h3 class="card__title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
             </a>
-            <a class="btn card__btn" href="#">Быстрый просмотр</a>
+            <a class="btn card-btn" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="popular__item">
@@ -228,7 +228,7 @@
             <a href="#">
               <h3 class="card__title">Сливочно-кофейное с кусочками шоколада</h3>
             </a>
-            <a class="btn card__btn" href="#">Быстрый просмотр</a>
+            <a class="btn card-btn" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="popular__item">
@@ -240,7 +240,7 @@
             <a href="#">
               <h3 class="card__title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
             </a>
-            <a class="btn card__btn" href="#">Быстрый просмотр</a>
+            <a class="btn card-btn" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="popular__item">
@@ -252,7 +252,7 @@
             <a href="#">
               <h3 class="card__title">Сливочное крем-брюле с карамельной подливкой</h3>
             </a>
-            <a class="btn card__btn" href="#">Быстрый просмотр</a>
+            <a class="btn card-btn" href="#">Быстрый просмотр</a>
           </article>
         </li>
       </ul>
@@ -295,20 +295,20 @@
         <label aria-label="Электронная почта">
           <input type="email" id="submit-email" name="email" placeholder="email@example.com">
         </label>
-        <button class="btn subscribe__btn" type="submit">Отправить</button>
+        <button class="btn subscribe-btn" type="submit">Отправить</button>
       </form>
     </section>
 
-    <section class="map">
+    <section class="map-and-contacts">
       <h2 class="visually-hidden">Как с нами связаться</h2>
       <div class="map__image"></div>
-      <div class="map__legend">
+      <div class="contacts-block">
         <p>Адрес главного офиса и офлайн-магазина:</p>
         <p>ул. Большая Конюшенная, 19/8, Санкт-Петербург</p>
         <p>Для заказов по телефону:</p>
         <a href="tel:+78124502525">8 812 450-25-25</a>
         <p>&#40;с 10 до 20 ежедневно&#41;</p>
-        <a class="btn modal__btn" href="#">Форма обратной связи</a>
+        <a class="btn contact-block__popup-btn" href="#">Форма обратной связи</a>
         <!-- <script>
           карта через JS подключится в конце страницы
         </script> -->
@@ -393,7 +393,7 @@
   <div class="popup">
     <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
 
-      <button class="btn close__btn" type="button">Закрыть</button>
+      <button class="btn feedback-form__close-btn" type="button">Закрыть</button>
 
       <p>Мы обязательно вам ответим!</p>
 
@@ -407,7 +407,7 @@
         <textarea name="user-text" rows="5" placeholder="Напишите что-нибудь..."></textarea>
       </label>
 
-      <button class="btn submit__btn" type="submit">Отправить</button>
+      <button class="btn feedback-form__submit-btn" type="submit">Отправить</button>
     </form>
   </div>
 </body>
