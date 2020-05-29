@@ -9,8 +9,8 @@
 </head>
 
 <body>
-  <header class="page-header">
-    <div class="page-header__top">
+  <header class="header">
+    <div class="header__main-nav main-nav">
       <nav class="main-nav">
         <a class="main-nav__logo" href="index.html">
           <img src="img/logo-gs.svg" width="154" height="64" alt="Логотип Gllacy Shop">
@@ -18,54 +18,55 @@
 
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="#">Каталог</a>
-            <ul class="sub-menu">
-              <li class="sub-menu__item">
-                <a href="#">Новинки</a>
+            <a class="main-nav__link" href="#">Каталог</a>
+            <ul class="main-nav__submenu submenu">
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Новинки</a>
               </li>
-              <li class="sub-menu__item">
-                <a>Сливочное</a>
+              <li class="submenu__item">
+                <a class="submenu__link">Сливочное</a>
               </li>
-              <li class="sub-menu__item">
-                <a href="#">Щербеты</a>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Щербеты</a>
               </li>
-              <li class="sub-menu__item">
-                <a href="#">Фруктовый лед</a>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Фруктовый лед</a>
               </li>
-              <li class="sub-menu__item">
-                <a href="#">Мелорин</a>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Мелорин</a>
               </li>
             </ul>
           </li>
           <li class="main-nav__item">
-            <a href="#">Доставка и оплата</a>
+            <a class="main-nav__link" href="#">Доставка и оплата</a>
           </li>
           <li class="main-nav__item">
-            <a href="#">О компании</a>
+            <a class="main-nav__link" href="#">О компании</a>
           </li>
         </ul>
       </nav>
-
-      <ul class="user-nav">
+    </div>
+    <div class="header__user-nav user-nav">
+      <ul class="user-nav__list">
         <li class="user-nav__item">
-          <button class="user-nav__btn user-nav__search-btn" type="button">
+          <button class="user-nav__btn user-nav__btn-search" type="button">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M16 14.6652L11.0785 9.73294C11.9827 8.48188 12.3826 6.93501 12.1984 5.40134C12.0141 3.86767 11.2594 2.4601 10.0848 1.45982C8.91022 0.45954 7.40233 -0.0598191 5.86234 0.00548954C4.32234 0.0707982 2.86363 0.715967 1.77757 1.81212C0.691516 2.90827 0.0580813 4.3747 0.0038002 5.91849C-0.050481 7.46228 0.478388 8.96976 1.48476 10.1398C2.49113 11.3098 3.90092 12.0563 5.43251 12.2301C6.96409 12.4039 8.50472 11.9922 9.74663 11.0772L14.6586 16L16 14.6652ZM6.08152 10.3767C5.24079 10.3767 4.41895 10.1268 3.71991 9.65874C3.02087 9.19063 2.47604 8.5253 2.15431 7.74687C1.83258 6.96844 1.7484 6.11188 1.91241 5.28551C2.07643 4.45913 2.48128 3.70006 3.07576 3.10427C3.67024 2.50849 4.42766 2.10276 5.25223 1.93838C6.0768 1.77401 6.93149 1.85837 7.70822 2.1808C8.48495 2.50324 9.14883 3.04927 9.61591 3.74983C10.083 4.4504 10.3323 5.27404 10.3323 6.11661C10.3298 7.24568 9.88115 8.3278 9.08451 9.12618C8.28788 9.92456 7.20813 10.3742 6.08152 10.3767Z"
                 fill="white" />
             </svg>
           </button>
-          <form action="https://echo.htmlacademy.ru" method="get">
 
+          <form class="user-nav__search-form search-form" action="https://echo.htmlacademy.ru" method="get">
             <label aria-label="Поиск товаров">
-              <input type="search" name="search" placeholder="Крем-брюле">
+              <input class="search-form__input" type="search" name="search" placeholder="Крем-брюле">
             </label>
 
           </form>
         </li>
 
         <li class="user-nav__item">
-          <button class="user-nav__btn user-nav__enter-btn" type="button">
+          <button class="user-nav__btn user-nav__btn-enter" type="button">
             <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z" fill="white" />
               <path
@@ -75,23 +76,23 @@
             <span>Вход</span>
           </button>
 
-          <form class="enter-form" action="https://echo.htmlacademy.ru" method="post">
+          <form class="user-nav__enter-form enter-form" action="https://echo.htmlacademy.ru" method="post">
             <ul class="enter-form__list">
               <li class="enter-form__item">
                 <label aria-label="Электронная почта">
-                  <input type="email" name="email" placeholder="email@example.com">
+                  <input class="enter-form__input" type="email" name="email" placeholder="email@example.com">
                 </label>
               </li>
               <li class="enter-form__item">
                 <label aria-label="Пароль">
-                  <input type="password" name="password" placeholder="••••••">
+                  <input class="enter-form__input" type="password" name="password" placeholder="••••••">
                 </label>
               </li>
               <li class="enter-form__item">
-                <a href="#">Забыли пароль?</a>
+                <a class="enter-form__link" href="#">Забыли пароль?</a>
               </li>
               <li class="enter-form__item">
-                <a href="#">Новая регистрация</a>
+                <a class="enter-form__link" href="#">Новая регистрация</a>
               </li>
             </ul>
             <button class="btn enter-form__submit-btn" type="submit">Войти</button>
@@ -114,14 +115,14 @@
             <span>Пусто</span>
           </button>
 
-          <form class="busket-form" action="https://echo.htmlacademy.ru" method="get">
-            <table class="busket-table">
-              <tr>
+          <form class="user-nav__busket-form busket-form" action="https://echo.htmlacademy.ru" method="get">
+            <table class="busket-form__table busket-table">
+              <tr class="busket-table__tr">
                 <td class="busket-table__td">
-                  <button class="busket-table__del-btn" type="button"></button>
+                  <button class="del-btn busket-table__del-btn" type="button"></button>
                 </td>
                 <td class="busket-table__td">
-                  <a href="#">
+                  <a class="busket-table__link" href="#">
                     <img src="img/items-jpg/item-1-small.jpg" width="33" height="33" alt="Мороженное">
                   </a>
                 </td>
@@ -130,9 +131,9 @@
                 <td class="busket-table__td">200 руб.</td>
                 <td class="busket-table__td">300 руб.</td>
               </tr>
-              <tr>
+              <tr class="busket-table__tr">
                 <td class="busket-table__td">
-                  <button class="busket-table__del-btn" type="button"></button>
+                  <button class="del-btn busket-table__del-btn" type="button"></button>
                 </td>
                 <td class="busket-table__td">
                   <a href="#">
@@ -150,97 +151,114 @@
         </li>
       </ul>
     </div>
-
-
-    <div class="info">
+    <div class="header__info info ">
       <span class="info__worktime">с 10 до 20, ежедневно</span>
-      <a class="info__phone" href="tel:+78124502525">8 812 450-25-25</a>
+      <a class="info__phone" href="tel:+78124502525">8&nbsp;812&nbsp;450-25-25</a>
     </div>
   </header>
 
-  <main class="page-main">
-    <ul class="breadcrumbs">
-      <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
-      <li class="breadcrumbs__item breadcrumbs__item_active"><a href="#">Каталог</a></li>
-      <li class="breadcrumbs__item"><a>Сливочное</a></li>
-    </ul>
+  <main class="main">
+    <div class="main__breadcrumbs breadcrumbs">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="index.html">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">Каталог</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link breadcrumbs__link--active">Сливочное</a>
+        </li>
+      </ul>
 
-    <h1 class="page-main__title">Сливочное мороженное</h1>
-
-    <section class="filter">
+      <h1 class="main__title">Сливочное мороженое</h1>
+    </div>
+    <section class="main__filter filter">
       <h2 class="visually-hidden">Фильтр товаров</h2>
       <form class="filter__form" action="https://echo.htmlacademy.ru" method="get">
-        <fieldset class="filter__item">
-          <legend>Сортировка:</legend>
-          <select class="filter__select">
-            <option value="popular">по популярности</option>
-            <option value="cheap">сначала недорогие</option>
-            <option value="expensive">сначала дорогие</option>
-            <option value="fat">по жирности</option>
-          </select>
-        </fieldset>
+        <div class="filter__item">
+          <label class="filter__title">
+            <span>Сортировка:</span>
+            <select class="filter__select">
+              <option value="popular">по популярности</option>
+              <option value="cheap">сначала недорогие</option>
+              <option value="expensive">сначала дорогие</option>
+              <option value="fat">по жирности</option>
+            </select>
+          </label>
+        </div>
 
-        <fieldset class="filter__item">
-          <legend>Цена:</legend>
-          <label aria-label="Минимальная цена">
-            <input type="text" name="min-price" value="100">
-            <span>&#8381;&thinsp;&#8212;&thinsp;</span>
-          </label>
+        <div class="filter__item">
+          <label class="filter__title">
+            <span>Цена:</span>
+            <label aria-label="Минимальная цена">
+              <input class="filter__input filter__input--price" type="text" name="min-price" value="100">
+              <span>&#8381;&thinsp;&#8212;&thinsp;</span>
+            </label>
 
-          <label aria-label="Максимальная цена">
-            <input type="text" name="max-price" value="500">
-            <span>&#8381;</span>
+            <label aria-label="Максимальная цена">
+              <input class="filter__input filter__input--price" type="text" name="max-price" value="500">
+              <span>&#8381;</span>
+            </label>
           </label>
-        </fieldset>
+        </div>
 
-        <fieldset class="filter__item">
-          <legend>Жирность:</legend>
-          <label aria-label="Жирность 0%">
-            <input type="radio" name="percent-fat" value="0%">
-            <span>0%</span>
+        <div class="filter__item">
+          <label class="filter__title">
+            <span>Жирность:</span>
+            <div class="filter__wrapper">
+              <label aria-label="Жирность 0%">
+                <input class="filter__input" type="radio" name="percent-fat" value="0%">
+                <span>0%</span>
+              </label>
+              <label aria-label="Жирность до 10%">
+                <input class="filter__input" type="radio" name="percent-fat" value="until-10%" checked>
+                <span>до 10%</span>
+              </label>
+              <label aria-label="Жирность до 30%">
+                <input class="filter__input" type="radio" name="percent-fat" value="until-30%">
+                <span>до 30%</span>
+              </label>
+              <label aria-label="Жирность выше 30%">
+                <input class="filter__input" type="radio" name="percent-fat" value="more-than-30%">
+                <span>выше 30%</span>
+            </div>
           </label>
-          <label aria-label="Жирность до 10%">
-            <input type="radio" name="percent-fat" value="until-10%" checked>
-            <span>до 10%</span>
           </label>
-          <label aria-label="Жирность до 30%">
-            <input type="radio" name="percent-fat" value="until-30%">
-            <span>до 30%</span>
-          </label>
-          <label aria-label="Жирность выше 30%">
-            <input type="radio" name="percent-fat" value="more-than-30%">
-            <span>выше 30%</span>
-          </label>
-        </fieldset>
+        </div>
 
-        <fieldset class="filter__item">
-          <legend>Наполнители:</legend>
-          <label>
-            <input type="checkbox" name="chocolate" checked>
-            <span>шоколадные</span>
+        <div class="filter__item">
+          <label class="filter__title">
+            <span>Наполнители:</span>
+            <div class="filter__wrapper">
+              <label>
+                <input class="filter__input" type="checkbox" name="chocolate" checked>
+                <span>шоколадные</span>
+              </label>
+              <label>
+                <input class="filter__input" type="checkbox" name="shugar" checked>
+                <span>сахарные присыпки</span>
+              </label>
+              <label>
+                <input class="filter__input" type="checkbox" name="fruct">
+                <span>фрукты</span>
+              </label>
+              <label>
+                <input class="filter__input" type="checkbox" name="syrup">
+                <span>сиропы</span>
+              </label>
+              <label>
+                <input class="filter__input" type="checkbox" name="jam">
+                <span>джемы</span>
+            </div>
           </label>
-          <label>
-            <input type="checkbox" name="shugar" checked>
-            <span>сахарные присыпки</span>
           </label>
-          <label>
-            <input type="checkbox" name="fruct">
-            <span>фрукты</span>
-          </label>
-          <label>
-            <input type="checkbox" name="syrup">
-            <span>сиропы</span>
-          </label>
-          <label>
-            <input type="checkbox" name="jam">
-            <span>джемы</span>
-          </label>
-        </fieldset>
+        </div>
         <button class="btn filter__submit-btn" type="submit">Применить</button>
       </form>
     </section>
 
-    <section class="catalog">
+    <section class="main__catalog catalog">
       <h2 class="visually-hidden">Каталог мороженного</h2>
       <ul class="catalog__list">
         <li class="catalog__item">
@@ -248,11 +266,11 @@
             <a href="#">
               <img src="img/items-jpg/item-1.jpg" width="267" height="267" alt="Мороженное">
             </a>
-            <p>310 &#8381;&#47;<span>кг</span></p>
+            <p class="card__text">310 &#8381;&#47;<span class="cart__text--s">кг</span></p>
             <a href="#">
               <h3 class="card__title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
             </a>
-            <a class="btn card-btn" href="#">Быстрый просмотр</a>
+            <a class="btn card__btn" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="catalog__item">
@@ -260,11 +278,11 @@
             <a href="#">
               <img src="img/items-jpg/item-2.jpg" width="267" height="267" alt="Мороженное">
             </a>
-            <p>380 &#8381;&#47;<span>кг</span></p>
+            <p class="card__text">380 &#8381;&#47;<span class="cart__text--s">кг</span></p>
             <a href="#">
               <h3 class="card__title">Сливочно-кофейное с кусочками шоколада</h3>
             </a>
-            <a class="btn card-btn" href="#">Быстрый просмотр</a>
+            <a class="btn card__btn" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="catalog__item">
@@ -272,11 +290,11 @@
             <a href="#">
               <img src="img/items-jpg/item-3.jpg" width="267" height="267" alt="Мороженное">
             </a>
-            <p>355 &#8381;&#47;<span>кг</span></p>
+            <p class="card__text">355 &#8381;&#47;<span class="cart__text--s">кг</span></p>
             <a href="#">
               <h3 class="card__title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
             </a>
-            <a class="btn card-btn" href="#">Быстрый просмотр</a>
+            <a class="btn card__btn" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="catalog__item">
@@ -284,11 +302,11 @@
             <a href="#">
               <img src="img/items-jpg/item-4.jpg" width="267" height="267" alt="Мороженное">
             </a>
-            <p>415 &#8381;&#47;<span>кг</span></p>
+            <p class="card__text">415 &#8381;&#47;<span class="cart__text--s">кг</span></p>
             <a href="#">
               <h3 class="card__title">Сливочное крем-брюле с карамельной подливкой</h3>
             </a>
-            <a class="btn card-btn" href="#">Быстрый просмотр</a>
+            <a class="btn card__btn" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="catalog__item">
@@ -296,11 +314,11 @@
             <a href="#">
               <img src="img/items-jpg/item-5.jpg" width="267" height="267" alt="Мороженное">
             </a>
-            <p>325 &#8381;&#47;<span>кг</span></p>
+            <p class="card__text">325 &#8381;&#47;<span class="cart__text--s">кг</span></p>
             <a href="#">
               <h3 class="card__title">Сливочное с брусничным джемом</h3>
             </a>
-            <a class="btn card-btn" href="#">Быстрый просмотр</a>
+            <a class="btn card__btn" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="catalog__item">
@@ -308,11 +326,11 @@
             <a href="#">
               <img src="img/items-jpg/item-6.jpg" width="267" height="267" alt="Мороженное">
             </a>
-            <p>410 &#8381;&#47;<span>кг</span></p>
+            <p class="card__text">410 &#8381;&#47;<span class="cart__text--s">кг</span></p>
             <a href="#">
               <h3 class="card__title">Сливочно-черничное с цельными ягодами черники</h3>
             </a>
-            <a class="btn card-btn" href="#">Быстрый просмотр</a>
+            <a class="btn card__btn" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="catalog__item">
@@ -320,11 +338,11 @@
             <a href="#">
               <img src="img/items-jpg/item-7.jpg" width="267" height="267" alt="Мороженное">
             </a>
-            <p>315 &#8381;&#47;<span>кг</span></p>
+            <p class="card__text">315 &#8381;&#47;<span class="cart__text--s">кг</span></p>
             <a href="#">
               <h3 class="card__title">Сливочно-лимонное с карамельной присыпкой</h3>
             </a>
-            <a class="btn card-btn" href="#">Быстрый просмотр</a>
+            <a class="btn card__btn" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="catalog__item">
@@ -332,11 +350,11 @@
             <a href="#">
               <img src="img/items-jpg/item-8.jpg" width="267" height="267" alt="Мороженное">
             </a>
-            <p>320 &#8381;&#47;<span>кг</span></p>
+            <p class="card__text">320 &#8381;&#47;<span class="cart__text--s">кг</span></p>
             <a href="#">
               <h3 class="card__title">Сливочное с шоколадной стружкой</h3>
             </a>
-            <a class="btn card-btn" href="#">Быстрый просмотр</a>
+            <a class="btn card__btn" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="catalog__item">
@@ -344,11 +362,11 @@
             <a href="#">
               <img src="img/items-jpg/item-9.jpg" width="267" height="267" alt="Мороженное">
             </a>
-            <p>440 &#8381;&#47;<span>кг</span></p>
+            <p class="card__text">440 &#8381;&#47;<span class="cart__text--s">кг</span></p>
             <a href="#">
               <h3 class="card__title">Сливочно-ванильное с кусочками шоколада</h3>
             </a>
-            <a class="btn card-btn" href="#">Быстрый просмотр</a>
+            <a class="btn card__btn" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="catalog__item">
@@ -356,11 +374,11 @@
             <a href="#">
               <img src="img/items-jpg/item-10.jpg" width="267" height="267" alt="Мороженное">
             </a>
-            <p>435 &#8381;&#47;<span>кг</span></p>
+            <p class="card__text">435 &#8381;&#47;<span class="cart__text--s">кг</span></p>
             <a href="#">
               <h3 class="card__title">Сливочноe с ментоловым сиропом</h3>
             </a>
-            <a class="btn card-btn" href="#">Быстрый просмотр</a>
+            <a class="btn card__btn" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="catalog__item">
@@ -368,11 +386,11 @@
             <a href="#">
               <img src="img/items-jpg/item-11.jpg" width="267" height="267" alt="Мороженное">
             </a>
-            <p>355 &#8381;&#47;<span>кг</span></p>
+            <p class="card__text">355 &#8381;&#47;<span class="cart__text--s">кг</span></p>
             <a href="#">
               <h3 class="card__title">Сливочное с кусочками черного шоколада</h3>
             </a>
-            <a class="btn card-btn" href="#">Быстрый просмотр</a>
+            <a class="btn card__btn" href="#">Быстрый просмотр</a>
           </article>
         </li>
         <li class="catalog__item">
@@ -380,29 +398,24 @@
             <a href="#">
               <img src="img/items-jpg/item-12.jpg" width="267" height="267" alt="Мороженное">
             </a>
-            <p>420 &#8381;&#47;<span>кг</span></p>
+            <p class="card__text">420 &#8381;&#47;<span class="cart__text--s">кг</span></p>
             <a href="#">
               <h3 class="card__title">Сливочное с мятным сиропом</h3>
             </a>
-            <a class="btn card-btn" href="#">Быстрый просмотр</a>
+            <a class="btn card__btn" href="#">Быстрый просмотр</a>
           </article>
         </li>
       </ul>
     </section>
 
-    <div class="pagination">
+    <div class="main__pagination pagination">
       <ul class="pagination__list">
-        <li class="pagination__item pagination__item_prev pagination__item_disabled">
-          <a class="pagination__link" aria-label="Предыдущая страница">
-            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M0.15889 6.34125L6.06761 11.8512C6.1703 11.9465 6.30937 12 6.45436 12C6.59934 12 6.73841 11.9465 6.84111 11.8512C6.89146 11.8048 6.93142 11.7495 6.95869 11.6885C6.98596 11.6276 7 11.5623 7 11.4962C7 11.4302 6.98596 11.3649 6.95869 11.304C6.93142 11.243 6.89146 11.1877 6.84111 11.1412L1.3084 6.00125L6.84111 0.831247C6.89146 0.784766 6.93142 0.729465 6.95869 0.668535C6.98596 0.607606 7 0.542253 7 0.476248C7 0.410242 6.98596 0.344889 6.95869 0.283959C6.93142 0.22303 6.89146 0.167728 6.84111 0.121247C6.73357 0.0364304 6.59506 -0.00654793 6.45436 0.00124741C6.38391 0.000448227 6.31406 0.013381 6.2493 0.0392141C6.18454 0.0650473 6.12631 0.103209 6.07835 0.151247L0.15889 5.63125C0.108543 5.67773 0.0685816 5.73303 0.0413108 5.79396C0.01404 5.85489 0 5.92024 0 5.98625C0 6.05225 0.01404 6.11761 0.0413108 6.17854C0.0685816 6.23947 0.108543 6.29477 0.15889 6.34125Z"
-                fill="white" fill-opacity="0.2" />
-            </svg>
-          </a>
+        <li class="pagination__item">
+          <a class="pagination__link pagination__link--prev pagination__link--disabled"
+            aria-label="Предыдущая страница"></a>
         </li>
         <li class="pagination__item">
-          <a class="pagination__link pagination__item_active">1</a>
+          <a class="pagination__link pagination__link--active">1</a>
         </li>
         <li class="pagination__item">
           <a class="pagination__link" href="#" aria-label="Перейти на страницу 2">2</a>
@@ -416,52 +429,89 @@
         <li class="pagination__item">
           <a class="pagination__link" href="#" aria-label="Перейти на страницу 5">5</a>
         </li>
-        <li class="pagination__item pagination__item_next">
-          <a class="pagination_link" href="#" aria-label="Следующая страница">
-            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M6.84111 5.65875L0.932395 0.148752C0.829699 0.05349 0.690626 0 0.545642 0C0.400659 0 0.261586 0.05349 0.15889 0.148752C0.108543 0.195234 0.0685817 0.250534 0.041311 0.311464C0.0140403 0.372393 0 0.437746 0 0.503752C0 0.569758 0.0140403 0.635111 0.041311 0.69604C0.0685817 0.75697 0.108543 0.812271 0.15889 0.858752L5.6916 5.99875L0.15889 11.1688C0.108543 11.2152 0.0685817 11.2705 0.041311 11.3315C0.0140403 11.3924 0 11.4577 0 11.5238C0 11.5898 0.0140403 11.6551 0.041311 11.716C0.0685817 11.777 0.108543 11.8323 0.15889 11.8788C0.266426 11.9636 0.404942 12.0065 0.545642 11.9988C0.616091 11.9996 0.68594 11.9866 0.750698 11.9608C0.815455 11.935 0.873688 11.8968 0.921651 11.8488L6.84111 6.36875C6.89146 6.32227 6.93142 6.26697 6.95869 6.20604C6.98596 6.14511 7 6.07976 7 6.01375C7 5.94775 6.98596 5.88239 6.95869 5.82146C6.93142 5.76053 6.89146 5.70523 6.84111 5.65875Z"
-                fill="white" />
-            </svg>
-          </a>
+        <li class="pagination__item">
+          <a class="pagination__link pagination__link--next" href="#" aria-label="Следующая страница"></a>
         </li>
       </ul>
     </div>
   </main>
 
-  <footer class="page-footer">
-    <h2 class="visually-hidden">Мы в соцсетях</h2>
-    <ul class="social__list">
-      <li class="social__item social__fb">
-        <a href="#" aria-label="Facebook"></a>
-      </li>
-      <li class="social__item social__vk">
-        <a href="#" aria-label="Vkontakte"></a>
-      </li>
-      <li class="social__item social__inst">
-        <a href="#" aria-label="Instagram"></a>
-      </li>
-      <li class="social__item social__tw">
-        <a href="#" aria-label="Twitter"></a>
-      </li>
-    </ul>
-    <ul class="footer-menu">
-      <li class="footer-menu__item">
-        <a href="#">Для поставщиков</a>
-      </li>
-      <li class="footer-menu__item">
-        <a href="#">Наши документы</a>
-      </li>
-      <li class="footer-menu__item">
-        <a href="#">О производстве</a>
-      </li>
-      <li class="footer-menu__item">
-        <a href="#">Экологические стандарты</a>
-      </li>
-    </ul>
+  <footer class="footer footer--line">
+    <div class="footer__social social">
+      <h2 class="visually-hidden">Мы в соцсетях</h2>
+      <ul class="social__list">
+        <li class="social__item social__item--fb">
+          <a href="#" aria-label="Facebook">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16 0C12.8355 0 9.74207 0.938384 7.11088 2.69649C4.4797 4.45459 2.42894 6.95345 1.21793 9.87706C0.0069325 12.8007 -0.309921 16.0177 0.307443 19.1214C0.924806 22.2251 2.44866 25.0761 4.6863 27.3137C6.92394 29.5513 9.77487 31.0752 12.8786 31.6926C15.9823 32.3099 19.1993 31.9931 22.1229 30.7821C25.0466 29.5711 27.5454 27.5203 29.3035 24.8891C31.0616 22.2579 32 19.1645 32 16C32 11.7565 30.3143 7.68687 27.3137 4.68629C24.3131 1.68571 20.2435 0 16 0ZM20.06 9.45H17V12.9H20V16.34H17V25H14V16.34H11V12.9H14V9.45C13.9449 8.59575 14.2291 7.75426 14.7908 7.1083C15.3525 6.46234 16.1464 6.06407 17 6H20V9.45H20.06Z"
+                fill="white" fill-opacity="0.8" />
+            </svg>
+          </a>
+        </li>
+        <li class="social__item social__item--vk">
+          <a href="#" aria-label="Vkontakte">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16.64 14.49C16.9652 14.4904 17.2875 14.4293 17.59 14.31C17.8645 14.2077 18.0922 14.0085 18.23 13.75C18.3343 13.4964 18.3854 13.2241 18.38 12.95C18.376 12.7057 18.3143 12.4659 18.2 12.25C18.0714 12.0066 17.8523 11.8235 17.59 11.74C17.2687 11.627 16.9306 11.5695 16.59 11.57H14.59V14.57H15.16C15.75 14.52 16.24 14.51 16.64 14.49Z"
+                fill="white" fill-opacity="0.8" />
+              <path
+                d="M18.12 17.08C17.751 17.0101 17.3752 16.9832 17 17H14.61V20.5H17.06C17.4757 20.4953 17.8865 20.4104 18.27 20.25C18.591 20.1392 18.8632 19.9199 19.04 19.63C19.1865 19.3527 19.2621 19.0436 19.26 18.73C19.2753 18.3782 19.1848 18.0298 19 17.73C18.7922 17.4167 18.4806 17.1865 18.12 17.08Z"
+                fill="white" fill-opacity="0.8" />
+              <path
+                d="M16 0C12.8355 0 9.74207 0.938384 7.11088 2.69649C4.4797 4.45459 2.42894 6.95345 1.21793 9.87706C0.0069325 12.8007 -0.309921 16.0177 0.307443 19.1214C0.924806 22.2251 2.44866 25.0761 4.6863 27.3137C6.92394 29.5513 9.77487 31.0752 12.8786 31.6926C15.9823 32.3099 19.1993 31.9931 22.1229 30.7821C25.0466 29.5711 27.5454 27.5203 29.3035 24.8891C31.0616 22.2579 32 19.1645 32 16C32 11.7565 30.3143 7.68687 27.3137 4.68629C24.3131 1.68571 20.2435 0 16 0ZM22.6 20.53C22.3376 21.056 21.9537 21.5119 21.48 21.86C20.9342 22.2714 20.3122 22.5705 19.65 22.74C18.8286 22.9383 17.9848 23.029 17.14 23.01H11V9H16.45C17.2781 8.9868 18.1063 9.02354 18.93 9.11C19.473 9.19401 19.9994 9.36273 20.49 9.61C20.9868 9.84615 21.4013 10.2258 21.68 10.7C21.9455 11.1728 22.0801 11.7079 22.07 12.25C22.0819 12.8916 21.8931 13.5209 21.53 14.05C21.1452 14.588 20.6142 15.0045 20 15.25V15.32C20.8272 15.4588 21.5898 15.8541 22.18 16.45C22.7295 17.0712 23.0163 17.8815 22.98 18.71C23.0043 19.3386 22.8738 19.9636 22.6 20.53Z"
+                fill="white" fill-opacity="0.8" />
+            </svg>
+          </a>
+        </li>
+        <li class="social__item social__item--inst">
+          <a href="#" aria-label="Instagram">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g opacity="0.8">
+                <path
+                  d="M20.92 16C20.92 17.3155 20.3974 18.5771 19.4673 19.5072C18.5371 20.4374 17.2755 20.96 15.96 20.96C14.6445 20.96 13.3829 20.4374 12.4528 19.5072C11.5226 18.5771 11 17.3155 11 16C11.001 15.6158 11.048 15.233 11.14 14.86H10.24V21.7H21.64V14.86H20.74C20.8406 15.2325 20.901 15.6147 20.92 16Z"
+                  fill="white" />
+                <path
+                  d="M16 18.66C16.5252 18.656 17.0375 18.4967 17.4723 18.202C17.9071 17.9073 18.245 17.4905 18.4432 17.0042C18.6415 16.5178 18.6913 15.9836 18.5864 15.4689C18.4816 14.9542 18.2266 14.4821 17.8539 14.1121C17.4811 13.7421 17.0071 13.4908 16.4916 13.3897C15.9762 13.2887 15.4424 13.3425 14.9575 13.5445C14.4726 13.7464 14.0584 14.0873 13.7669 14.5243C13.4755 14.9613 13.32 15.4748 13.32 16C13.3213 16.3506 13.3917 16.6976 13.5271 17.021C13.6625 17.3444 13.8602 17.638 14.1091 17.8851C14.358 18.1321 14.653 18.3276 14.9775 18.4606C15.3019 18.5936 15.6494 18.6613 16 18.66Z"
+                  fill="white" />
+                <path d="M21.68 10.3H18.64V13.34H21.68V10.3Z" fill="white" />
+                <path
+                  d="M16 0C12.8355 0 9.74207 0.938384 7.11088 2.69649C4.4797 4.45459 2.42894 6.95345 1.21793 9.87706C0.0069325 12.8007 -0.309921 16.0177 0.307443 19.1214C0.924806 22.2251 2.44866 25.0761 4.6863 27.3137C6.92394 29.5513 9.77487 31.0752 12.8786 31.6926C15.9823 32.3099 19.1993 31.9931 22.1229 30.7821C25.0466 29.5711 27.5454 27.5203 29.3035 24.8891C31.0616 22.2579 32 19.1645 32 16C32 11.7565 30.3143 7.68687 27.3137 4.68629C24.3131 1.68571 20.2435 0 16 0ZM24 21.7C24.0027 22.0045 23.9444 22.3064 23.8285 22.588C23.7127 22.8696 23.5416 23.1251 23.3253 23.3395C23.1091 23.5539 22.8521 23.7228 22.5695 23.8362C22.2869 23.9497 21.9845 24.0054 21.68 24H10.28C9.97928 23.9987 9.68175 23.9382 9.40442 23.8219C9.12709 23.7056 8.87537 23.5358 8.66366 23.3222C8.45194 23.1086 8.28436 22.8554 8.17049 22.5771C8.05662 22.2988 7.99869 22.0007 8.00001 21.7V10.3C7.99869 9.99927 8.05662 9.70123 8.17049 9.42289C8.28436 9.14455 8.45194 8.89137 8.66366 8.67779C8.87537 8.46422 9.12709 8.29443 9.40442 8.17814C9.68175 8.06184 9.97928 8.00131 10.28 8H21.67C21.9749 7.99467 22.2778 8.0503 22.561 8.16362C22.8441 8.27694 23.1017 8.44568 23.3188 8.65992C23.5358 8.87416 23.7079 9.12959 23.8249 9.41123C23.9418 9.69287 24.0014 9.99504 24 10.3V21.7Z"
+                  fill="white" />
+              </g>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item social__item--tw">
+          <a href="#" aria-label="Twitter">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16 0C12.8355 0 9.74207 0.938384 7.11088 2.69649C4.4797 4.45459 2.42894 6.95345 1.21793 9.87706C0.0069325 12.8007 -0.309921 16.0177 0.307443 19.1214C0.924806 22.2251 2.44866 25.0761 4.6863 27.3137C6.92394 29.5513 9.77487 31.0752 12.8786 31.6926C15.9823 32.3099 19.1993 31.9931 22.1229 30.7821C25.0466 29.5711 27.5454 27.5203 29.3035 24.8891C31.0616 22.2579 32 19.1645 32 16C32 11.7565 30.3143 7.68687 27.3137 4.68629C24.3131 1.68571 20.2435 0 16 0ZM23.94 12.81C23.69 19.33 20.48 23.64 12.94 23.51H12.46C12.01 23.51 7.91001 23.07 7.11001 21.69C8.8989 21.9555 10.7228 21.5494 12.23 20.55C11.18 20.26 9.31001 20.09 8.98001 17.7C9.39279 17.8642 9.84415 17.9058 10.28 17.82C9.00001 17 7.53001 16.3 7.61001 14.17C8.02796 14.4893 8.54454 14.652 9.07001 14.63C8.30001 14.4 6.92001 11.39 8.07001 9.85C10.07 11.64 12.14 13.33 15.87 13.49C16.1 11.28 17.11 9.79 19.04 9.17C19.7375 8.93332 20.4908 8.91568 21.1986 9.11946C21.9065 9.32323 22.5351 9.73867 23 10.31C23.74 10.08 24.45 9.84 25.19 9.62C25.1758 9.95711 25.0846 10.2865 24.9234 10.5829C24.7622 10.8793 24.5353 11.1349 24.26 11.33C24.5167 11.3601 24.7768 11.3336 25.0221 11.2524C25.2674 11.1712 25.492 11.0372 25.68 10.86C25.5628 11.2985 25.3443 11.7034 25.0421 12.0421C24.7399 12.3808 24.3624 12.6438 23.94 12.81Z"
+                fill="white" fill-opacity="0.8" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-    <div class="footer-copyright">
-      <a href="https://htmlacademy.ru/intensive/htmlcss">
+    <div class="footer__company-info company-info">
+      <ul class="company-info__list">
+        <li class="company-info__item company-info__item--heart">
+          <a class="company-info__link" href="#">Для поставщиков</a>
+        </li>
+        <li class="company-info__item">
+          <a class="company-info__link" href="#">Наши документы</a>
+        </li>
+        <li class="company-info__item">
+          <a class="company-info__link" href="#">О производстве</a>
+        </li>
+        <li class="company-info__item">
+          <a class="company-info__link" href="#">Экологические стандарты</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__copyright copyright">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">
         <svg width="108" height="39" viewBox="0 0 108 39" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M44.582 28.426C44.7698 28.4144 44.9553 28.3771 45.134 28.3151V29.7263C44.7564 29.8745 44.3566 29.9496 43.9538 29.948C43.6117 29.9839 43.2676 29.9061 42.9692 29.7255C42.6707 29.5449 42.4327 29.2703 42.2882 28.94C41.3994 29.6974 40.2879 30.1005 39.1473 30.0791C37.6339 30.0791 36.2348 29.2021 36.2348 27.3776C36.2348 25.1197 38.2145 24.4241 39.9468 24.4241C40.6765 24.4355 41.4034 24.5233 42.1169 24.6862V24.3737C42.1169 23.275 41.3554 22.4988 39.9277 22.4988C38.894 22.5023 37.8726 22.7358 36.9296 23.1843V21.3699C37.9559 20.9951 39.0325 20.7977 40.1181 20.7852C42.4785 20.7852 43.9253 21.9747 43.9253 24.6459V27.8111C43.912 27.962 43.9555 28.1123 44.0465 28.2294C44.1374 28.3465 44.2683 28.4207 44.4107 28.436C44.4679 28.4427 44.5258 28.4393 44.582 28.426ZM38.1479 27.2163C38.177 27.5946 38.3467 27.9451 38.6198 28.1908C38.8929 28.4366 39.247 28.5574 39.6041 28.5268H39.7088C40.6057 28.5405 41.4713 28.1782 42.1169 27.5187V25.9966C41.522 25.8626 40.9165 25.7883 40.3084 25.7749C39.2615 25.7749 38.1479 26.1277 38.1479 27.2365V27.2163Z"
@@ -499,7 +549,13 @@
             fill="white" />
         </svg>
       </a>
-      <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
+      <p class="copyright__text">
+        <span>Сделано в </span>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">
+          <span>HTML Academy</span>
+        </a>
+        <span>© 2019</span>
+      </p>
     </div>
   </footer>
 
