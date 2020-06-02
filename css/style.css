@@ -129,21 +129,12 @@ img {
   cursor: pointer;
 }
 
-/* Grid */
-
-.body {
-  height: 100%;
-}
-
-.grid-container {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-}
-
 /* Page wrapper */
 
 .page-wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
   width: 1200px;
   padding-right: 27px;
   padding-left: 27px;
@@ -234,11 +225,14 @@ img {
   flex-direction: row;
   justify-content: flex-end;
   align-content: center;
+  width: 220px;
   list-style: none;
-  margin: 20px 0 0 auto;
+  margin: 14px 0 0 auto;
 }
 
 .user-nav__item {
+  padding: 0;
+  margin: 0;
   margin-right: 10px;
 }
 
@@ -258,18 +252,42 @@ img {
 }
 
 .user-nav__btn--lens {
-
+  position: relative;
   width: 32px;
   min-height: 32px;
 }
 
-.user-nav__btn--lens svg {}
+.user-nav__btn--lens svg {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+}
 
-.user-nav__btn--enter {}
+.user-nav__btn--enter {
+  position: relative;
+  width: 92px;
+  min-height: 32px;
+  padding-left: 34px;
+}
 
-.user-nav__btn--enter svg {}
+.user-nav__btn--enter svg {
+  position: absolute;
+  left: 16px;
+  top: 6px;
+}
 
-.user-nav__btn--busket {}
+.user-nav__btn--busket {
+  position: relative;
+  width: 100px;
+  min-height: 32px;
+  padding-left: 35px;
+}
+
+.user-nav__btn--busket svg {
+  position: absolute;
+  left: 16px;
+  top: 6px;
+}
 
 
 .search-form {
@@ -299,7 +317,7 @@ img {
 /* Инфо */
 .header__info {
   width: 167px;
-  margin-left: auto;
+  margin: -7px 0 0 auto;
 }
 
 .info__worktime {
@@ -310,6 +328,8 @@ img {
 }
 
 .info__phone {
+  display: block;
+  padding-top: 5px;
   font-size: 22px;
   line-height: 24px;
   font-weight: 700;
@@ -324,7 +344,7 @@ img {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-top: 269px;
+  margin-top: 273px;
 }
 
 .slider__item {
@@ -378,9 +398,11 @@ img {
 
 /* Предложения */
 .promotion__item {
+  position: relative;
   width: 100%;
   min-height: 229px;
   border-radius: 16px;
+  padding: 14px 30px 0 16px;
 }
 
 .promotion__item--raspberry {
@@ -397,18 +419,26 @@ img {
   font-size: 35px;
   line-height: 41px;
   font-weight: 700;
+  padding: 0;
+  margin: 0;
 }
 
 .promotion__text {
   font-size: 18px;
   line-height: 22px;
   font-weight: 700;
+  padding: 17px 0 0 0;
+  margin: 0;
 }
 
-.promoton__btn {
+.promotion__btn {
+  position: absolute;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
+  right: 22px;
+  bottom: 22px;
+  padding: 11px 23px 13px 22px;
 }
 
 /* Популярное */
@@ -432,22 +462,26 @@ img {
 .card--hit::before {
   display: inline-block;
   position: absolute;
+  left: -4px;
   content: "";
-  width: 61px;
-  min-height: 61px;
-  background-image: url(/img/hit-sticker.svg);
+  width: 70px;
+  min-height: 70px;
+  background: url(/img/hit-sticker.svg) no-repeat;
 }
 
 .card__text {
   font-size: 45px;
   line-height: 45px;
   font-weight: 700;
+  padding: 0;
+  margin: -65px 0 28px 0;
 }
 
 .card__text--s {
   font-size: 30px;
   line-height: 35px;
   font-weight: 700;
+  padding-left: 6px;
 }
 
 .card__title {
@@ -455,12 +489,19 @@ img {
   line-height: 22px;
   font-weight: 500;
   text-decoration: underline var(--lighter-white-02);
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 .card__btn {
+  position: absolute;
+  left: 33px;
+  bottom: -50px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
+  padding: 10px 16px 9px 16px;
 }
 
 /* Каталог */
@@ -930,6 +971,7 @@ img {
 
 .footer__copyright {
   margin-top: 18px;
+  margin-bottom: 25px;
 }
 
 .copyright__text {
@@ -939,8 +981,6 @@ img {
   padding: 0;
   margin: 0;
 }
-
-.copyright__link {}
 
 .copyright__link--border {
   border-bottom: 1px solid var(--lighter-white-02);
