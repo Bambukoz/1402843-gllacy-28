@@ -1149,7 +1149,10 @@ img {
   min-height: 306px;
   border-radius: 16px;
   background-color: var(--contacts);
-  padding: 29px 25px 20px 25px;
+  padding-top: 29px;
+  padding-right: 25px;
+  padding-bottom: 20px;
+  padding-left: 25px;
 }
 
 .contacts__text {
