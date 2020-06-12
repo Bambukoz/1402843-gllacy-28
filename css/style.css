@@ -734,6 +734,8 @@ img {
 
 .card__btn {
   position: absolute;
+  bottom: 21px;
+  left: 47px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
