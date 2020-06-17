@@ -20,10 +20,10 @@
 
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--first">
-              <a class="main-nav__link" href="#">Каталог</a>
+              <a class="main-nav__link" href="#"><span>Каталог</span></a>
               <ul class="main-nav__submenu submenu">
                 <li class="submenu__item submenu__item--top">
-                  <a class="submenu__link submenu__link--bold" href="#">Новинки</a>
+                  <a class="submenu__link submenu__link--first" href="#">Новинки</a>
                 </li>
                 <li class="submenu__item">
                   <a class="submenu__link" href="catalog.html">Сливочное</a>
@@ -35,15 +35,15 @@
                   <a class="submenu__link" href="#">Фруктовый лед</a>
                 </li>
                 <li class="submenu__item">
-                  <a class="submenu__link" href="#">Мелорин</a>
+                  <a class="submenu__link submenu__link--last" href="#">Мелорин</a>
                 </li>
               </ul>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Доставка и оплата</a>
+              <a class="main-nav__link" href="#"><span>Доставка и оплата</span></a>
             </li>
             <li class="main-nav__item main-nav__item--last">
-              <a class="main-nav__link" href="#">О компании</a>
+              <a class="main-nav__link" href="#"><span>О компании</span></a>
             </li>
           </ul>
         </nav>
@@ -86,15 +86,17 @@
                 </li>
                 <li class="enter-form__item">
                   <label class="enter-form__label" aria-label="Пароль">
-                    <input class="enter-form__input" type="password" name="password" placeholder="••••••">
+                    <input class="enter-form__input" type="password" name="password" placeholder="••••••••">
                   </label>
                 </li>
               </ul>
               <div class="enter-form__bottom">
-                <a class="enter-form__link" href="#">Забыли пароль?</a>
-                <a class="enter-form__link" href="#">Новая регистрация</a>
+                <button class="enter-form__submit-btn submit-btn btn" type="submit">Войти</button>
+                <div class="enter-form__bottom--rigth">
+                  <a class="enter-form__link" href="#">Забыли пароль?</a>
+                  <a class="enter-form__link" href="#">Новая регистрация</a>
+                </div>
               </div>
-              <button class="enter-form__submit-btn submit-btn btn" type="submit">Войти</button>
             </form>
           </li>
 
@@ -356,7 +358,7 @@
               fill="white" />
           </svg>
         </a>
-        <p class="copyright__text">Сделано в <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>© 2019</p>
+        <p class="copyright__text">Сделано в&nbsp;<a class="copyright__text--border" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy&nbsp;</a>© 2019</p>
       </div>
     </footer>
 

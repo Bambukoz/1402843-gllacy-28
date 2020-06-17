@@ -19,14 +19,14 @@
           </a>
 
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--first main-nav__item--selected">
-              <a class="main-nav__link" href="#">Каталог</a>
+            <li class="main-nav__item main-nav__item--first">
+              <a class="main-nav__link main-nav__link--active" href="#"><span>Каталог</span></a>
               <ul class="main-nav__submenu submenu">
                 <li class="submenu__item submenu__item--top">
-                  <a class="submenu__link submenu__link--bold" href="#">Новинки</a>
+                  <a class="submenu__link submenu__link--first" href="#">Новинки</a>
                 </li>
-                <li class="submenu__item submenu__item--selected">
-                  <a class="submenu__link">Сливочное</a>
+                <li class="submenu__item">
+                  <a class="submenu__link submenu__link--active">Сливочное</a>
                 </li>
                 <li class="submenu__item">
                   <a class="submenu__link" href="#">Щербеты</a>
@@ -35,15 +35,15 @@
                   <a class="submenu__link" href="#">Фруктовый лед</a>
                 </li>
                 <li class="submenu__item">
-                  <a class="submenu__link" href="#">Мелорин</a>
+                  <a class="submenu__link submenu__link--last" href="#">Мелорин</a>
                 </li>
               </ul>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Доставка и оплата</a>
+              <a class="main-nav__link" href="#"><span>Доставка и оплата</span></a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#">О компании</a>
+              <a class="main-nav__link" href="#"><span>О компании</span></a>
             </li>
           </ul>
         </nav>
@@ -86,7 +86,7 @@
                 </li>
                 <li class="enter-form__item">
                   <label class="enter-form__label" aria-label="Пароль">
-                    <input class="enter-form__input" type="password" name="password" placeholder="••••••" required>
+                    <input class="enter-form__input" type="password" name="password" placeholder="••••••••" required>
                   </label>
                 </li>
               </ul>
@@ -122,7 +122,7 @@
                   </td>
                   <td class="basket-table__td">Пломбир с апельсиновым джемом</td>
                   <td class="basket-table__td">1,5 кг х</td>
-                  <td class="basket-table__td">200 руб.</td>
+                  <td class="basket-table__td basket-table__td--gray">200 руб.</td>
                   <td class="basket-table__td">300 руб.</td>
                 </tr>
                 <tr class="basket-table__tr">
@@ -136,7 +136,7 @@
                   </td>
                   <td class="basket-table__td">Клубничный пломбир с присыпкой из белого шоколада</td>
                   <td class="basket-table__td">1,5 кг х</td>
-                  <td class="basket-table__td">300 руб.</td>
+                  <td class="basket-table__td basket-table__td--gray">300 руб.</td>
                   <td class="basket-table__td">450 руб.</td>
               </table>
               <p class="basket-form__price">Итого: 750 руб.</p>
@@ -153,7 +153,7 @@
 
     <main class="main">
       <section class="catalog">
-        <h1 class="main__title">Сливочное мороженое</h1>
+
 
         <div class="catalog__breadcrumbs breadcrumbs">
           <ul class="breadcrumbs__list">
@@ -169,34 +169,43 @@
           </ul>
         </div>
 
+        <h1 class="main__title">Сливочное мороженое</h1>
+
         <form class="catalog__filter filter" action="https://echo.htmlacademy.ru" method="get">
 
           <div class="filter__row">
             <label class="filter__area">
               <span class="filter__label">Сортировка:</span>
-              <span class="filter__slot">
+              <div class="filter__slot">
                 <select class="filter__select">
                   <option value="popular">по популярности</option>
                   <option value="cheap">сначала недорогие</option>
                   <option value="expensive">сначала дорогие</option>
                   <option value="fat">по жирности</option>
                 </select>
-              </span>
+                <svg class="filter__select--arrow" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 10L0 0H11" fill="#ECF1EE" />
+                </svg>
+              </div>
             </label>
 
             <div class="filter__area">
               <div class="filter__label range-price">
-                <p class="range-price__text">Цена:</span>
-                  <label class="range-price__item" aria-label="Минимальная цена">
+                <span class="range-price__text">Цена:</span>
+                <label class="range-price__item" aria-label="Минимальная цена">
+                  <div class="range-price__wrapper">
                     <input type="number" name="min-price" value="100" min="0">
-                    <span>&#8381;&thinsp;&#8212;&thinsp;</span>
-                  </label>
+                  </div>
+                  <span>&#8381;&nbsp;&ndash;&nbsp;</span>
+                </label>
 
-                  <label class="range-price__item" aria-label="Максимальная цена">
+                <label class="range-price__item" aria-label="Максимальная цена">
+                  <div class="range-price__wrapper">
                     <input type="number" name="max-price" value="500" min="0">
-                    <span>&#8381;</span>
-                  </label>
-                  </label>
+                  </div>
+                  <span>&#8381;</span>
+                </label>
+                </label>
               </div>
               <div class="filter__slot">
                 <div class="range">
@@ -214,23 +223,23 @@
               <div class="filter__slot">
                 <div class="option-group">
                   <label class="option-group__item option" aria-label="Жирность 0%">
-                    <input class="option__input" type="radio" name="percent-fat" value="0%">
-                    <span class="option__element"></span>
+                    <input class="option__input visually-hidden" type="radio" name="percent-fat" value="0%">
+                    <span class="option__element" tabindex="0"></span>
                     <span class="option__label">0%</span>
                   </label>
-                  <label class="option" aria-label="Жирность до 10%">
-                    <input class="option__input" type="radio" name="percent-fat" value="until-10%" checked>
-                    <span class="option__element"></span>
+                  <label class="option-group__item option" aria-label="Жирность до 10%">
+                    <input class="option__input visually-hidden" type="radio" name="percent-fat" value="until-10%" checked>
+                    <span class="option__element" tabindex="0"></span>
                     <span class="option__label">до 10%</span>
                   </label>
-                  <label class="option" aria-label="Жирность до 30%">
-                    <input class="option__input" type="radio" name="percent-fat" value="until-30%">
-                    <span class="option__element"></span>
+                  <label class="option-group__item option" aria-label="Жирность до 30%">
+                    <input class="option__input visually-hidden" type="radio" name="percent-fat" value="until-30%">
+                    <span class="option__element" tabindex="0"></span>
                     <span class="option__label">до 30%</span>
                   </label>
-                  <label class="option" aria-label="Жирность выше 30%">
-                    <input class="option__input" type="radio" name="percent-fat" value="more-than-30%">
-                    <span class="option__element"></span>
+                  <label class="option-group__item option" aria-label="Жирность выше 30%">
+                    <input class="option__input visually-hidden" type="radio" name="percent-fat" value="more-than-30%">
+                    <span class="option__element" tabindex="0"></span>
                     <span class="option__label">выше 30%</span>
                   </label>
                 </div>
@@ -241,32 +250,34 @@
           <div class="filter__row">
             <div class="filter__area">
               <span class="filter__label">Наполнители:</span>
-              <div class="option-group">
-                <label class="option-group__item option" aria-label="Шоколадные">
-                  <input class="option__input" type="checkbox" name="chocolate" checked>
-                  <span class="option__element"></span>
-                  <span clsss="option__label">шоколадные</span>
-                </label>
-                <label class="option-group__item option" aria-label="Сахарные присыпки">
-                  <input class="option__input" type="checkbox" name="shugar" checked>
-                  <span class="option__element"></span>
-                  <span class="option__label">сахарные присыпки</span>
-                </label>
-                <label class="option-group__item option" aria-label="Фрукты">
-                  <input class="option__input" type="checkbox" name="fruits">
-                  <span class="option__element"></span>
-                  <span class="option__label">фрукты</span>
-                </label>
-                <label class="option-group__item option" aria-label="Сиропы">
-                  <input class="option__input" type="checkbox" name="syrups">
-                  <span class="option__element"></span>
-                  <span class="option__label">сиропы</span>
-                </label>
-                <label class="option-group__item option" aria-label="Джемы">
-                  <input class="option__input" type="checkbox" name="Jams">
-                  <span class="option__element"></span>
-                  <span class="option__label">джемы</span>
-                </label>
+              <div class="filter__slot">
+                <div class="option-group">
+                  <label class="option-group__item option" aria-label="Шоколадные">
+                    <input class="option__input visually-hidden" type="checkbox" name="chocolate" checked>
+                    <span class="option__element" tabindex="0"></span>
+                    <span class="option__label">шоколадные</span>
+                  </label>
+                  <label class="option-group__item option" aria-label="Сахарные присыпки">
+                    <input class="option__input visually-hidden" type="checkbox" name="shugar" checked>
+                    <span class="option__element" tabindex="0"></span>
+                    <span class="option__label">сахарные присыпки</span>
+                  </label>
+                  <label class="option-group__item option" aria-label="Фрукты">
+                    <input class="option__input visually-hidden" type="checkbox" name="fruits">
+                    <span class="option__element" tabindex="0"></span>
+                    <span class="option__label">фрукты</span>
+                  </label>
+                  <label class="option-group__item option" aria-label="Сиропы">
+                    <input class="option__input visually-hidden" type="checkbox" name="syrups">
+                    <span class="option__element" tabindex="0"></span>
+                    <span class="option__label">сиропы</span>
+                  </label>
+                  <label class="option-group__item option" aria-label="Джемы">
+                    <input class="option__input visually-hidden" type="checkbox" name="Jams">
+                    <span class="option__element" tabindex="0"></span>
+                    <span class="option__label">джемы</span>
+                  </label>
+                </div>
               </div>
             </div>
             <button class="filter__submit-btn" type="submit">Применить</button>
@@ -473,24 +484,23 @@
     <footer class="footer">
 
       <ul class="footer__social social">
-        <li class="social__item social__item--fb">
-          <a class="social__link" href="#" aria-label="Facebook"></a>
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="#" aria-label="Facebook"></a>
         </li>
-        <li class="social__item social__item--vk">
-          <a class="social__link" href="#" aria-label="Vkontakte"></a>
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="#" aria-label="Vkontakte"></a>
         </li>
-        <li class="social__item social__item--inst">
-          <a class="social__link" href="#" aria-label="Instagram"></a>
+        <li class="social__item">
+          <a class="social__link social__link--inst" href="#" aria-label="Instagram"></a>
         </li>
-        <li class="social__item social__item--tw">
-          <a class="social__link" href="#" aria-label="Twitter"></a>
+        <li class="social__item">
+          <a class="social__link social__link--tw" href="#" aria-label="Twitter"></a>
         </li>
       </ul>
 
       <ul class="footer__company-info company-info">
         <li class="company-info__item company-info__item--heart">
-          <a class="company-info__link company-info__link--bold" href="#">Для
-            поставщиков</a>
+          <a class="company-info__link company-info__link--bold" href="#">Для поставщиков</a>
         </li>
         <li class="company-info__item">
           <a class="company-info__link" href="#">Наши документы</a>
@@ -540,7 +550,7 @@
               fill="white" />
           </svg>
         </a>
-        <p class="copyright__text">Сделано в <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>© 2019</p>
+        <p class="copyright__text">Сделано в&nbsp;<a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy&nbsp;</a>© 2019</p>
       </div>
     </footer>
   </div>
