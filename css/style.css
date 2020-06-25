@@ -1914,10 +1914,8 @@ img {
 .popup {
   display: none;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  margin: auto;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 485px;
   z-index: 4;
 }
 
