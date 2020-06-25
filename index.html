@@ -4,14 +4,13 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-  <div class="page-wrapper">
-    <header class="page-header">
+<body class="page">
+  <header class="page-header">
+    <div class="page-header__wrapper page-wrapper">
       <div class="page-header__top">
         <nav class="main-nav">
           <a class="main-nav__logo">
@@ -116,9 +115,10 @@
         <span class="info__work-time">с 10 до 20, ежедневно</span>
         <a class="info__phone" href="tel:+78124502525">8&nbsp;812&nbsp;450-25-25</a>
       </div>
-    </header>
-
-    <main class="main">
+    </div>
+  </header>
+  <main class="main">
+    <div class="page-wrapper">
       <h1 class="visually-hidden">Магазин мороженного "Глейси"</h1>
 
       <section class="main__box slider">
@@ -153,14 +153,16 @@
         <div class="main__cell">
           <article class="promotion promotion--raspberry">
             <h3 class="promotion__title">Малинка даром!</h3>
-            <p class="promotion__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+            <p class="promotion__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового
+              варенья бесплатно.</p>
             <a class="promotion__btn btn" href="#">Хочу варенье!</a>
           </article>
         </div>
         <div class="main__cell">
           <article class="promotion promotion--chocolate">
             <h3 class="promotion__title">Шоколадки даром!</h3>
-            <p class="promotion__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
+            <p class="promotion__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной
+              присыпки совершенно бесплатно.
             </p>
             <a class="promotion__btn btn" href="#">Хочу шоколадки!</a>
           </article>
@@ -230,19 +232,25 @@
       </section>
 
       <section class="main__box about-us">
-        <h2 class="about-us__title">Магазин Глэйси&nbsp;&ndash; это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес </h2>
+        <h2 class="about-us__title">Магазин Глэйси&nbsp;&ndash; это онлайн и офлайн-магазин по продаже мороженого
+          собственного производства на развес </h2>
         <ul class="about-us__list">
           <li class="about-us__item about-us__item--prod">
-            <p class="about-us__text">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+            <p class="about-us__text">Все наше мороженое изготавливается на собственном производстве, с использованием
+              современного оборудования и проверенных временем технологий.</p>
           </li>
           <li class="about-us__item about-us__item--purchase">
-            <p class="about-us__text">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+            <p class="about-us__text">Закупка ингредиентов производится только у проверенных фермерских хозяйств и
+              компаний, с которыми нас связывает долговременное сотрудничество.</p>
           </li>
           <li class="about-us__item about-us__item--materials">
-            <p class="about-us__text">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+            <p class="about-us__text">Для приготовления мороженого используются настоящие сливки и молоко высочайшего
+              качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого
+              сырья.</p>
           </li>
           <li class="about-us__item about-us__item--delivery">
-            <p class="about-us__text">Доставка нашего мороженого до заказчиков осуществляется в&nbsp;специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
+            <p class="about-us__text">Доставка нашего мороженого до заказчиков осуществляется в&nbsp;специальном
+              термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
             </p>
           </li>
         </ul>
@@ -258,7 +266,8 @@
         <div class="main__cell">
           <section class="subscribe">
             <h2 class="visually-hidden">Подписка на рассылку</h2>
-            <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно &#61;&#41;</p>
+            <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного,
+              что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно &#61;&#41;</p>
 
             <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
 
@@ -275,8 +284,8 @@
         <h2 class="visually-hidden">Как с нами связаться</h2>
         <div class="contacts__map">
           <!-- <script>
-          карта через JS подключится в конце страницы
-        </script> -->
+        карта через JS подключится в конце страницы
+      </script> -->
         </div>
         <div class="contacts__content">
           <p class="contacts__text contacts__text--s">Адрес главного офиса<br>и офлайн-магазина:</p>
@@ -287,11 +296,12 @@
           <a class="contacts__popup-btn submit-btn btn" href="#">Форма обратной связи</a>
         </div>
       </section>
-    </main>
+    </div>
+  </main>
 
-    <footer class="footer">
-
-      <ul class="footer__social social">
+  <footer class="page-footer">
+    <div class="page-footer__wrapper page-wrapper">
+      <ul class="page-footer__social social">
         <li class="social__item">
           <a class="social__link social__link--fb" href="#" aria-label="Facebook">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -340,8 +350,7 @@
           </a>
         </li>
       </ul>
-
-      <ul class="footer__company-info company-info">
+      <ul class="page-footer__company-info company-info">
         <li class="company-info__item company-info__item--heart">
           <a class="company-info__link company-info__link--bold" href="#">Для поставщиков</a>
         </li>
@@ -355,8 +364,7 @@
           <a class="company-info__link" href="#">Экологические стандарты</a>
         </li>
       </ul>
-
-      <div class="footer__copyright copyright">
+      <div class="page-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">
           <svg width="108" height="39" viewBox="0 0 108 39" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -393,30 +401,32 @@
               fill="white" />
           </svg>
         </a>
-        <p class="copyright__text">Сделано в&nbsp;<a class="copyright__text--border" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy&nbsp;</a>© 2019</p>
+        <p class="copyright__text">Сделано в&nbsp;<a class="copyright__text--border" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy&nbsp;</a>©
+          2019</p>
       </div>
-    </footer>
-
-    <div class="popup">
-
-      <form class="popup__feedback-form feedback-form " action="https://echo.htmlacademy.ru" method="post">
-        <button class="popup__close" type="button" aria-label="Закрыть всплывающее окно"></button>
-        <p class="feedback-form__text">Мы обязательно вам ответим!</p>
-
-        <label class="feedback-form__label" aria-label="Имя пользователя">
-          <input class="feedback-form__input input-area" type=" text" name="user-name" placeholder="Имя Фамилия" required>
-        </label>
-        <label class="feedback-form__label" aria-label="Электронная почта">
-          <input class="feedback-form__input input-area" type=" email" name="user-email" placeholder="email@example.com" required>
-        </label>
-        <label class="feedback-form__label" aria-label="Ваше письмо нам">
-          <textarea class="feedback-form__textarea input-area" name="user-text" rows="5" placeholder="В свободной форме" required></textarea>
-        </label>
-
-        <button class="feedback-form__submit-btn submit-btn btn" type="submit">Отправить</button>
-      </form>
     </div>
+  </footer>
+
+  <div class="popup">
+    <button class="popup__close" type="button" aria-label="Закрыть всплывающее окно"></button>
+    <form class="popup__feedback-form feedback-form " action="https://echo.htmlacademy.ru" method="post">
+      <p class="feedback-form__text">Мы обязательно вам ответим!</p>
+
+      <label class="feedback-form__label" aria-label="Имя пользователя">
+        <input class="feedback-form__input input-area" type="text" name="user-name" placeholder="Имя Фамилия" required>
+      </label>
+      <label class="feedback-form__label" aria-label="Электронная почта">
+        <input class="feedback-form__input input-area" type="email" name="user-email" placeholder="email@example.com" required>
+      </label>
+      <label class="feedback-form__label" aria-label="Ваше письмо нам">
+        <textarea class="feedback-form__textarea input-area" name="user-text" rows="5" placeholder="В свободной форме" required></textarea>
+      </label>
+
+      <button class="feedback-form__submit-btn submit-btn btn" type="submit">Отправить</button>
+    </form>
   </div>
+  <div class="overlay"></div>
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
