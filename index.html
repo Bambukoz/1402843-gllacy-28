@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page">
+<body class="page js-body">
   <header class="page-header">
     <div class="page-header__wrapper page-wrapper">
       <div class="page-header__top">
@@ -59,7 +59,7 @@
 
             <form class="user-nav__search-form search-form" action="https://echo.htmlacademy.ru" method="get">
               <label class="search-form__label" aria-label="Поиск товаров">
-                <input class="search-form__input input-area" type="search" name="search" placeholder="Крем-брюле">
+                <input class="search-form__input input-area js-search" type="search" name="search" placeholder="Крем-брюле">
               </label>
 
             </form>
@@ -80,18 +80,18 @@
               <ul class="enter-form__list">
                 <li class="enter-form__item">
                   <label class="enter-form__label" aria-label="Электронная почта">
-                    <input class="enter-form__input input-area" type="email" name="email" placeholder="email@example.com">
+                    <input class="enter-form__input input-area" type="email" name="email" placeholder="email@example.com" required>
                   </label>
                 </li>
                 <li class="enter-form__item">
                   <label class="enter-form__label" aria-label="Пароль">
-                    <input class="enter-form__input input-area" type="password" name="password" placeholder="••••••••">
+                    <input class="enter-form__input input-area" type="password" name="password" placeholder="••••••••" required>
                   </label>
                 </li>
               </ul>
               <div class="enter-form__bottom">
-                <button class="enter-form__submit-btn submit-btn btn" type="submit">Войти</button>
-                <div class="enter-form__bottom--rigth">
+                <button class="enter-form__submit-btn submit-btn btn js-enter" type="submit">Войти</button>
+                <div class="enter-form__bottom-rigth">
                   <a class="enter-form__link" href="#">Забыли пароль?</a>
                   <a class="enter-form__link" href="#">Новая регистрация</a>
                 </div>
@@ -121,20 +121,20 @@
     <div class="page-wrapper">
       <h1 class="visually-hidden">Магазин мороженного "Глейси"</h1>
 
-      <section class="main__box slider">
+      <section class="main__box slider js-slider">
         <h2 class="visually-hidden">Cлайдеры</h2>
         <ul class="slider__list">
-          <li class="slider__item slider__item--active">
+          <li class="slider__item js-slider-item slider__item--active">
             <img class="slider__image" src="img/promo-ice-1.png" alt="Мороженки" width="1045" height="966">
             <h3 class="slider__title">Крем-брюле и пломбир с&nbsp;малиновым джемом</h3>
             <a class="slider__btn btn" href="#">Давайте оба!</a>
           </li>
-          <li class="slider__item">
+          <li class="slider__item js-slider-item">
             <img class="slider__image" src="img/promo-ice-2.png" alt="Мороженки" width="1065" height="859">
             <h3 class="slider__title">Шоколадный пломбир и&nbsp;лимонный сорбет</h3>
             <a class="slider__btn btn" href="#">Давайте оба!</a>
           </li>
-          <li class="slider__item">
+          <li class="slider__item js-slider-item">
             <img class="slider__image" src="img/promo-ice-3.png" alt="Мороженки" width="1079" height="854">
             <h3 class="slider__title">Пломбир с помадкой и&nbsp;клубничный щербет</h3>
             <a class="slider__btn btn" href="#">Давайте оба!</a>
@@ -142,9 +142,9 @@
         </ul>
 
         <div class="slider__toggle-group">
-          <button class="slider__toggle slider__toggle--active" type="button" aria-label="Промо-1"></button>
-          <button class="slider__toggle" type="button" aria-label="Промо-2"></button>
-          <button class="slider__toggle" type="button" aria-label="Промо-3"></button>
+          <button class="slider__toggle js-slider-toggle slider__toggle--active" type="button" aria-label="Промо-1"></button>
+          <button class="slider__toggle js-slider-toggle" type="button" aria-label="Промо-2"></button>
+          <button class="slider__toggle js-slider-toggle" type="button" aria-label="Промо-3"></button>
         </div>
       </section>
 
@@ -293,7 +293,7 @@
           <p class="contacts__text contacts__text--s">Для заказов по телефону:</p>
           <a class="contacts__link" href="tel:+78124502525">8&nbsp;812&nbsp;450-25-25</a>
           <p class="contacts__text contacts__text--s">&#40;с 10 до 20 ежедневно&#41;</p>
-          <a class="contacts__popup-btn submit-btn btn" href="#">Форма обратной связи</a>
+          <a class="contacts__popup-btn submit-btn btn js-popup-open" href="#">Форма обратной связи</a>
         </div>
       </section>
     </div>
@@ -401,14 +401,14 @@
               fill="white" />
           </svg>
         </a>
-        <p class="copyright__text">Сделано в&nbsp;<a class="copyright__text--border" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy&nbsp;</a>©
+        <p class="copyright__text">Сделано в&nbsp;<a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy&nbsp;</a>©
           2019</p>
       </div>
     </div>
   </footer>
 
-  <div class="popup">
-    <button class="popup__close" type="button" aria-label="Закрыть всплывающее окно"></button>
+  <div class="popup js-popup">
+    <button class="popup__close js-popup-close" type="button" aria-label="Закрыть всплывающее окно"></button>
     <form class="popup__feedback-form feedback-form " action="https://echo.htmlacademy.ru" method="post">
       <p class="feedback-form__text">Мы обязательно вам ответим!</p>
 
@@ -425,7 +425,7 @@
       <button class="feedback-form__submit-btn submit-btn btn" type="submit">Отправить</button>
     </form>
   </div>
-  <div class="overlay"></div>
+  <div class="overlay js-overlay"></div>
   <script type="text/javascript" src="js/script.js"></script>
 </body>
 
