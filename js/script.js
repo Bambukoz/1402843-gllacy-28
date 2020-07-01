@@ -1,15 +1,43 @@
-const popup = document.querySelector('.js-popup');
-const overlay = document.querySelector('.js-overlay');
-const popupOpen = document.querySelector('.js-popup-open');
-const popupClose = document.querySelector('.js-popup-close');
+let body = document.querySelector('.js-body');
+let userNavigation = document.querySelector('.js-user-nav');
+let searchOpen = userNavigation.querySelector('.js-search-open');
+let searchForm = userNavigation.querySelector('.js-search-form');
+let searchFormInput = searchForm.querySelector('.js-search-form__input');
+let enterOpen = userNavigation.querySelector('.js-enter-open');
+let enterForm = userNavigation.querySelector('.js-enter-form');
+let enterFormUserEmail = userNavigation.querySelector('.js-enter-form__email');
 
-const searchInput = document.querySelector('.js-search');
-const enterBtn = document.querySelector('.js-enter');
+let slider = document.querySelector('.js-slider');
+let sliderItem = slider.querySelectorAll('.js-slider-item');
+let sliderToggle = slider.querySelectorAll('.js-slider-toggle');
+let popup = document.querySelector('.js-popup');
+let overlay = document.querySelector('.js-overlay');
+let popupOpen = document.querySelector('.js-popup-open');
+let popupClose = popup.querySelector('.js-popup-close');
+let feedbackForm = popup.querySelector('.js-feedback-form');
+let feedbackFormUserName = popup.querySelector('.js-feedback-form__user-name');
+let feedbackFormUserEmail = popup.querySelector('.js-feedback-form__user-email');
+let feedbackFormUserMessage = popup.querySelector('.js-feedback-form__user-message');
 
-const body = document.querySelector('.js-body');
-const slider = document.querySelector('.js-slider');
-const sliderItem = slider.querySelectorAll('.js-slider-item');
-const sliderToggle = slider.querySelectorAll('.js-slider-toggle');
+// ######
+
+let isStorageSupport = true;
+let storageName = '';
+let storageEmail = '';
+
+// ######
+
+try {
+  storageName = localStorage.getItem('userName');
+} catch (err) {
+  isStorageSupport = false;
+}
+
+try {
+  storageEmail = localStorage.getItem('userEmail');
+} catch (err) {
+  isStorageSupport = false;
+}
 
 // ######
 
@@ -18,12 +46,37 @@ popupOpen.addEventListener('click', function (evt) {
   if (!popup.classList.contains('popup--active')) {
     popup.classList.add('popup--active');
     overlay.classList.add('overlay--active');
+    feedbackFormUserName.focus();
+  };
+
+  if (storageName && !storageEmail) {
+    feedbackFormUserName.value = storageName;
+    userEmail.focus();
+  } else if (storageName && storageEmail) {
+    feedbackFormUserName.value = storageName;
+    userEmail.value = storageEmail;
+    feedbackFormUserMessage.focus();
+  } else {
+    feedbackFormUserName.focus();
+  };
+});
+
+feedbackForm.addEventListener('submit', function (evt) {
+  if (!feedbackFormUserName.value || !feedbackFormUserEmail.value || !feedbackFormUserMessage.value) {
+    evt.preventDefault();
+    popup.classList.remove('popup--error');
+    popup.offsetWidth = popup.offsetWidth;
+    popup.classList.add('popup--error');
+  } else if (isStorageSupport) {
+    localStorage.setItem('userName', feedbackFormUserName.value);
+    localStorage.setItem('userEmail', userEmail.value);
   }
 });
 
 popupClose.addEventListener('click', function () {
   if (popup.classList.contains('popup--active')) {
     popup.classList.remove('popup--active');
+    popup.classList.remove('popup--error');
     overlay.classList.remove('overlay--active');
   };
 });
@@ -31,27 +84,58 @@ popupClose.addEventListener('click', function () {
 overlay.addEventListener('click', function () {
   if (overlay.classList.contains('overlay--active')) {
     popup.classList.remove('popup--active');
+    popup.classList.remove('popup--error');
     overlay.classList.remove('overlay--active');
   }
 });
 
-window.addEventListener('keydown', function (evt) {
+window.addEventListener('keydown', function () {
   if (evt.keyCode === 27) {
-    if (popup.classList.contains("popup--active")) {
-      popup.classList.remove("popup--active");
-      overlay.classList.remove("overlay--active");
+    if (popup.classList.contains('popup--active')) {
+      popup.classList.remove('popup--active');
+      popup.classList.remove('popup--error');
+      overlay.classList.remove('overlay--active');
     }
   }
 });
 
-// ######
+searchOpen.addEventListener('click', function () {
+  searchForm.classList.toggle('search-form--active');
+});
 
-// searchInput.addEventListener('keydown', function (evt) {
-//   if (evt.keyCode === 13) {
-//     evt.preventDefault();
-//     console.log('Форма отправлена!')
-//   };
-// });
+searchForm.addEventListener('submit', function (evt) {
+  evt.preventDefault();
+  alert('Ищу ' + searchFormInput.value);
+  if (!searchFormInput.value) {
+    searchForm.classList.remove('popup--error');
+    searchForm.offsetWidth = popup.offsetWidth;
+    searchForm.classList.add('popup--error');
+  };
+});
+
+enterOpen.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  enterForm.classList.toggle('enter-form--active');
+  enterFormUserEmail.focus();
+  if (storageEmail) {
+    enterFormUserEmail.value = storageEmail;
+    enterFormUserPassword.focus();
+  } else {
+    enterFormUserEmail.focus();
+  };
+});
+
+
+enterForm.addEventListener('submit', function (evt) {
+  evt.preventDefault();
+  if (!enterFormUserEmail.value) {
+    enterForm.classList.remove('popup--error');
+    enterForm.offsetWidth = enterForm.offsetWidth;
+    enterForm.classList.add('popup--error');
+  } else if (isStorageSupport) {
+    localStorage.setItem('userEmail', enterFormUserEmail.value);
+  };
+});
 
 // #######
 

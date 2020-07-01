@@ -477,6 +477,10 @@ img {
   z-index: 2;
 }
 
+.search-form--active {
+  display: block;
+}
+
 .input-area {
   font-size: 14px;
   line-height: 16px;
@@ -542,6 +546,10 @@ img {
   padding-bottom: 18px;
   padding-left: 19px;
   z-index: 2;
+}
+
+.enter-form--active {
+  display: block;
 }
 
 .enter-form__list {
@@ -1785,6 +1793,11 @@ img {
   margin: 0 -27px;
 }
 
+.contacts__map iframe {
+  position: absolute;
+  border: none;
+}
+
 .contacts__map::before {
   display: block;
   content: "";
@@ -1837,7 +1850,7 @@ img {
   font-weight: 700;
   color: #323232;
   padding: 0;
-  margin: 3px 0 22px 0;
+  margin: 3px 0 0 0;
 }
 
 .contacts__popup-btn {
@@ -1963,7 +1976,7 @@ img {
 .company-info__item--heart::before {
   position: absolute;
   top: 6px;
-  left: 0;
+  left: 2px;
   content: "";
   display: block;
   width: 15px;
@@ -2059,10 +2072,61 @@ img {
   }
 }
 
+@-webki-keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .popup--active {
   display: block;
   -webkit-animation: bounce 1s;
   animation: bounce 1s;
+}
+
+.popup--error {
+  -webkit-animation: shake 0.6s;
+  animation: shake 0.6s;
 }
 
 .overlay {
