@@ -85,7 +85,7 @@
                 </li>
                 <li class="enter-form__item">
                   <label class="enter-form__label" aria-label="Пароль">
-                    <input class="enter-form__input input-area" type="password" name="user-password" placeholder="••••••••" required>
+                    <input class="enter-form__input input-area js-enter-form__password" type="password" name="user-password" placeholder="••••••••" required>
                   </label>
                 </li>
               </ul>
@@ -100,7 +100,7 @@
           </li>
 
           <li class="user-nav__item user-nav__item--last">
-            <button class="user-nav__btn user-nav__btn--basket" type="button">
+            <button class="user-nav__btn user-nav__btn--basket js-basket-open" type="button">
               <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z" fill="white" />
                 <path d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z" fill="white" />
@@ -269,10 +269,10 @@
             <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного,
               что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно &#61;&#41;</p>
 
-            <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
+            <form class="subscribe__form js-subscribe" action="https://echo.htmlacademy.ru" method="post">
 
               <label class="subscribe__label" aria-label="Электронная почта">
-                <input class="subscribe__input" type="email" name="email" placeholder="email@example.com" required>
+                <input class="subscribe__input js-subscribe__input" type="email" name="user-email" placeholder="email@example.com" required>
               </label>
               <button class="subscribe__btn submit-btn btn" type="submit">Отправить</button>
             </form>
@@ -291,7 +291,7 @@
           <p class="contacts__text contacts__text--s">Для заказов по телефону:</p>
           <a class="contacts__link" href="tel:+78124502525">8&nbsp;812&nbsp;450-25-25</a>
           <p class="contacts__text contacts__text--s">&#40;с 10 до 20 ежедневно&#41;</p>
-          <a class="contacts__popup-btn submit-btn btn js-popup-open" href="#">Форма обратной связи</a>
+          <a class="contacts__popup-btn submit-btn btn js-popup-open" href="form.html">Форма обратной связи</a>
         </div>
       </section>
     </div>
@@ -411,13 +411,13 @@
       <p class="feedback-form__text">Мы обязательно вам ответим!</p>
 
       <label class="feedback-form__label" aria-label="Имя пользователя">
-        <input class="feedback-form__input input-area js-feedback-form__user-name" type="text" name="user-name" placeholder="Имя Фамилия" required>
+        <input class="feedback-form__input input-area js-feedback-form__user-name" type="text" name="user-name" placeholder="Имя Фамилия">
       </label>
       <label class="feedback-form__label" aria-label="Электронная почта">
-        <input class="feedback-form__input input-area js-feedback-form__user-email" type="email" name="user-email" placeholder="email@example.com" required>
+        <input class="feedback-form__input input-area js-feedback-form__user-email" type="email" name="user-email" placeholder="email@example.com">
       </label>
       <label class="feedback-form__label" aria-label="Ваше письмо нам">
-        <textarea class="feedback-form__textarea input-area js-feedback-form__user-message" name="user-text" rows="5" placeholder="В свободной форме" required></textarea>
+        <textarea class="feedback-form__textarea input-area js-feedback-form__user-message" name="user-text" rows="5" placeholder="В свободной форме"></textarea>
       </label>
 
       <button class="feedback-form__submit-btn submit-btn btn" type="submit">Отправить</button>
