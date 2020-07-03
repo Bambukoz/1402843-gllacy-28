@@ -2,6 +2,7 @@ let userNavigation = document.querySelector('.js-user-nav');
 let popup = document.querySelector('.js-popup');
 let slider = document.querySelector('.js-slider');
 let subscribe = document.querySelector('.js-subscribe');
+let filter = document.querySelector('.js-filter');
 // ######
 
 let isStorageSupport = true;
@@ -239,5 +240,12 @@ if (slider) {
       sliderItem[2].classList.add('slider__item--active');
       body.style.backgroundColor = '#9D8B84';
     };
+  });
+};
+
+if (filter) {
+  filter.addEventListener('submit', function (evt) {
+    evt.preventDefault();
+    alert('Фильтрую список');
   });
 };
