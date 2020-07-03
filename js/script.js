@@ -81,6 +81,12 @@ if (userNavigation) {
       searchForm.classList.remove('search-form--active');
       enterForm.classList.remove('enter-form--active');
     });
+
+    basketForm.addEventListener('submit', function (evt) {
+      evt.preventDefault();
+      alert('Заказ оформлен!');
+    });
+
   } else {
     basketOpen.addEventListener('click', function (evt) {
       evt.preventDefault();
