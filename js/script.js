@@ -201,6 +201,13 @@ if (popup) {
   });
 };
 
+if (filter) {
+  filter.addEventListener('submit', function (evt) {
+    evt.preventDefault();
+    alert('Фильтрую список');
+  });
+};
+
 if (slider) {
   let body = document.querySelector('.js-body');
   let sliderItem = slider.querySelectorAll('.js-slider-item');
@@ -226,7 +233,7 @@ if (slider) {
       sliderItem[2].classList.toggle('slider__item--active', false);
       sliderToggle[1].classList.add('slider__toggle--active');
       sliderItem[1].classList.add('slider__item--active');
-      body.style.backgroundColor = '#8996A6';
+      body.style.backgroundColor = 'var(--slider-2)';
     };
   });
 
@@ -238,14 +245,7 @@ if (slider) {
       sliderItem[1].classList.toggle('slider__item--active', false);
       sliderToggle[2].classList.add('slider__toggle--active');
       sliderItem[2].classList.add('slider__item--active');
-      body.style.backgroundColor = '#9D8B84';
+      body.style.backgroundColor = 'var(--slider-3)';
     };
-  });
-};
-
-if (filter) {
-  filter.addEventListener('submit', function (evt) {
-    evt.preventDefault();
-    alert('Фильтрую список');
   });
 };
