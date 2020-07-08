@@ -949,7 +949,7 @@
 
   .slider__toggle {
     width: 21px;
-    min-height: 21px;
+    height: 21px;
     background-color: transparent;
     border-radius: 50%;
     border: 2px solid var(--white);
