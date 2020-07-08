@@ -943,19 +943,20 @@
   .slider__toggle-group {
     position: absolute;
     min-width: 79px;
-    bottom: 20px;
+    bottom: 19px;
     left: 0;
   }
 
   .slider__toggle {
     width: 21px;
-    height: 21px;
+    min-height: 21px;
     background-color: transparent;
     border-radius: 50%;
     border: 2px solid var(--white);
     cursor: pointer;
     outline: none;
     transition: all 0.3s ease;
+    padding: 0;
     margin-right: 4px;
   }
 
